@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+<header class="pharmacy-navbar">
+    <div class="navbar-container">
+
+        <a href="index.html" class="pharmacy-logo">
+            <img src="Assets/blacklogo.webp" alt="MediCare Pharmacy Logo">
+        </a>
+
+        <nav class="desktop-navigation" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active" aria-current="page">About Us</a>
+            <a href="service.html">Service</a>
+            <a href="shop.html">Shop</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+
+        <div class="navbar-actions">
+            <a href="login.html" class="nav-login">Login</a>
+            <a href="register.html" class="nav-register">Register</a>
+        </div>
+
+        <button
+            class="hamburger-button"
+            id="menuOpen"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-controls="mobileSidebar"
+            aria-expanded="false">
+            <i class="bi bi-list"></i>
+        </button>
+
+    </div>
+</header>
+
+<div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
+
+<aside
+    class="mobile-sidebar"
+    id="mobileSidebar"
+    aria-label="Mobile navigation"
+    aria-hidden="true"
+    inert>
+
+    <div class="sidebar-header">
+        <a href="index.html" class="sidebar-logo">
+            <img src="Assets/blacklogo.webp" alt="MediCare Pharmacy Logo">
+        </a>
+
+        <button
+            type="button"
+            class="sidebar-close"
+            id="menuClose"
+            aria-label="Close navigation menu">
+            <i class="bi bi-x-lg"></i>
+        </button>
+    </div>
+
+    <nav class="sidebar-navigation" aria-label="Mobile navigation links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="service.html">Service</a>
+        <a href="shop.html">Shop</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <div class="sidebar-actions">
+        <a href="login.html" class="sidebar-login">Login</a>
+        <a href="register.html" class="sidebar-register">Register</a>
+    </div>
+
+</aside>
+<section class="blog-hero" id="blogHero">
+
+    <div class="blog-hero-container">
+
+        <div class="blog-hero-content">
+
+            <nav class="blog-breadcrumb" aria-label="Breadcrumb">
+                <a href="error.html">Home</a>
+                <i class="bi bi-chevron-right"></i>
+                <span>Health & Wellness Blog</span>
+            </nav>
+
+            <div class="blog-hero-badge">
+                <span class="blog-badge-dot"></span>
+                YOUR GUIDE TO BETTER HEALTH
+            </div>
+
+            <h1>
+                Knowledge for a
+                <span>Healthier You.</span>
+            </h1>
+
+            <p class="blog-hero-description">
+                Explore practical health tips, wellness insights, medicine
+                guides, and expert-informed articles to help you make
+                more informed decisions about your everyday well-being.
+            </p>
+
+            <div class="blog-hero-actions">
+                <a href="error.html" class="blog-primary-button">
+                    Explore Articles
+                    <i class="bi bi-arrow-up-right"></i>
+                </a>
+
+                <a href="error.html" class="blog-secondary-button">
+                    Browse Topics
+                    <i class="bi bi-arrow-down-right"></i>
+                </a>
+            </div>
+
+            <div class="blog-hero-highlights">
+
+                <div class="blog-highlight">
+                    <span class="blog-highlight-icon">
+                        <i class="bi bi-journal-medical"></i>
+                    </span>
+                    <div>
+                        <strong>Health Insights</strong>
+                        <span>Helpful reading</span>
+                    </div>
+                </div>
+
+                <div class="blog-highlight">
+                    <span class="blog-highlight-icon">
+                        <i class="bi bi-heart-pulse"></i>
+                    </span>
+                    <div>
+                        <strong>Everyday Wellness</strong>
+                        <span>Healthy living ideas</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="blog-hero-visual">
+
+            <div class="blog-visual-background"></div>
+
+            <div class="blog-decoration blog-decoration-one"></div>
+            <div class="blog-decoration blog-decoration-two"></div>
+
+            <div class="blog-image-wrapper">
+                <img
+                    src="Assets/banner4.webp"
+                    alt="Healthcare professional sharing health and wellness information"
+                    class="blog-hero-image"
+                    width="650"
+                    height="650"
+                    fetchpriority="high"
+                >
+            </div>
+
+            <div class="blog-floating-card blog-featured-card">
+
+                <div class="blog-card-icon">
+                    <i class="bi bi-book-half"></i>
+                </div>
+
+                <div class="blog-card-copy">
+                    <span>FEATURED TOPIC</span>
+                    <strong>Everyday Wellness</strong>
+                    <p>Small steps for healthier living</p>
+                </div>
+
+                <a href="error.html" aria-label="Read featured topic">
+                    <i class="bi bi-arrow-up-right"></i>
+                </a>
+
+            </div>
+
+            <div class="blog-floating-card blog-health-card">
+
+                <div class="blog-health-icon">
+                    <i class="bi bi-shield-check"></i>
+                </div>
+
+                <div>
+                    <strong>Make Informed Choices</strong>
+                    <span>Knowledge starts here</span>
+                </div>
+
+            </div>
+
+            <div class="blog-visual-caption">
+                <span></span>
+                LEARN · UNDERSTAND · LIVE WELL
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="blog-topic-strip">
+
+        <a href="error.html" class="blog-topic-item">
+            <span class="blog-topic-icon">
+                <i class="bi bi-capsule"></i>
+            </span>
+
+            <span class="blog-topic-copy">
+                <strong>Medicine Guides</strong>
+                <small>Understand the essentials</small>
+            </span>
+
+            <i class="bi bi-arrow-up-right blog-topic-arrow"></i>
+        </a>
+
+        <a href="error.html" class="blog-topic-item">
+            <span class="blog-topic-icon">
+                <i class="bi bi-apple"></i>
+            </span>
+
+            <span class="blog-topic-copy">
+                <strong>Nutrition</strong>
+                <small>Build healthy habits</small>
+            </span>
+
+            <i class="bi bi-arrow-up-right blog-topic-arrow"></i>
+        </a>
+
+        <a href="error.html" class="blog-topic-item">
+            <span class="blog-topic-icon">
+                <i class="bi bi-activity"></i>
+            </span>
+
+            <span class="blog-topic-copy">
+                <strong>Healthy Living</strong>
+                <small>Support daily wellness</small>
+            </span>
+
+            <i class="bi bi-arrow-up-right blog-topic-arrow"></i>
+        </a>
+
+        <a href="error.html" class="blog-topic-item">
+            <span class="blog-topic-icon">
+                <i class="bi bi-person-hearts"></i>
+            </span>
+
+            <span class="blog-topic-copy">
+                <strong>Personal Care</strong>
+                <small>Care for yourself</small>
+            </span>
+
+            <i class="bi bi-arrow-up-right blog-topic-arrow"></i>
+        </a>
+
+    </div>
+
+</section>
+
+
+<section class="blog-section" id="blogCards">
+
+    <div class="blog-container">
+
+        <div class="blog-section-heading">
+            <div class="blog-heading-content">
+                <span class="blog-eyebrow">
+                    <span class="eyebrow-dot"></span>
+                    THE MEDICARE JOURNAL
+                </span>
+
+                <h2>Insights for a <span>Healthier Life</span></h2>
+
+                <p>
+                    Discover practical health advice, wellness inspiration,
+                    and helpful information for your everyday healthcare journey.
+                </p>
+            </div>
+
+            <a href="error.html" class="blog-view-all">
+                View All Articles
+                <i class="bi bi-arrow-up-right"></i>
+            </a>
+        </div>
+
+        <div class="blog-filter-list">
+            <button class="blog-filter active" type="button" data-category="All">All Articles</button>
+            <button class="blog-filter" type="button" data-category="Wellness">Wellness</button>
+            <button class="blog-filter" type="button" data-category="Nutrition">Nutrition</button>
+            <button class="blog-filter" type="button" data-category="Medicine">Medicine Guides</button>
+            <button class="blog-filter" type="button" data-category="Personal Care">Personal Care</button>
+        </div>
+
+        <div class="blog-card-grid">
+
+            <article class="blog-card" data-category="Wellness">
+                <a href="error.html" class="blog-card-image-link" aria-label="Read the article about everyday wellness">
+                    <div class="blog-card-image-wrapper">
+                        <img src="Assets/blog1.webp" alt="Healthy lifestyle and everyday wellness" class="blog-card-image" loading="lazy" width="600" height="400">
+                        <span class="blog-image-label">WELLNESS</span>
+                    </div>
+                </a>
+
+                <div class="blog-card-content">
+                    <div class="blog-card-meta">
+                        <span><i class="bi bi-calendar3"></i> Oct 08, 2026</span>
+                        <span><i class="bi bi-clock"></i> 5 min read</span>
+                    </div>
+
+                    <h3>
+                        <a href="error.html">7 Simple Habits for a Healthier Everyday Life</a>
+                    </h3>
+
+                    <p>
+                        Discover practical daily habits that can help you build
+                        a balanced routine and support your overall well-being.
+                    </p>
+
+                    <div class="blog-card-footer">
+                        <span class="blog-author">
+                            <span class="blog-author-icon"><i class="bi bi-person"></i></span>
+                            Health & Wellness
+                        </span>
+
+                        <a href="error.html" class="blog-read-more" aria-label="Read article">
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-card" data-category="Nutrition">
+                <a href="error.html" class="blog-card-image-link" aria-label="Read the article about balanced nutrition">
+                    <div class="blog-card-image-wrapper">
+                        <img src="Assets/blog3.webp" alt="Fresh fruits and nutritious food" class="blog-card-image" loading="lazy" width="600" height="400">
+                        <span class="blog-image-label">NUTRITION</span>
+                    </div>
+                </a>
+
+                <div class="blog-card-content">
+                    <div class="blog-card-meta">
+                        <span><i class="bi bi-calendar3"></i> Oct 06, 2026</span>
+                        <span><i class="bi bi-clock"></i> 4 min read</span>
+                    </div>
+
+                    <h3>
+                        <a href="error.html">A Beginner's Guide to Balanced Daily Nutrition</a>
+                    </h3>
+
+                    <p>
+                        Learn the basics of balanced meals, essential nutrients,
+                        and simple ways to make thoughtful food choices.
+                    </p>
+
+                    <div class="blog-card-footer">
+                        <span class="blog-author">
+                            <span class="blog-author-icon"><i class="bi bi-person"></i></span>
+                            Nutrition Guide
+                        </span>
+
+                        <a href="error.html" class="blog-read-more" aria-label="Read article">
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-card" data-category="Medicine">
+                <a href="error.html" class="blog-card-image-link" aria-label="Read the medicine safety guide">
+                    <div class="blog-card-image-wrapper">
+                        <img src="Assets/blog4.webp" alt="Medicine packaging and healthcare supplies" class="blog-card-image" loading="lazy" width="600" height="400">
+                        <span class="blog-image-label">MEDICINE GUIDES</span>
+                    </div>
+                </a>
+
+                <div class="blog-card-content">
+                    <div class="blog-card-meta">
+                        <span><i class="bi bi-calendar3"></i> Oct 04, 2026</span>
+                        <span><i class="bi bi-clock"></i> 6 min read</span>
+                    </div>
+
+                    <h3>
+                        <a href="error.html">Essential Medicine Safety Tips Everyone Should Know</a>
+                    </h3>
+
+                    <p>
+                        Understand medication labels, safe storage, and why
+                        following professional instructions matters.
+                    </p>
+
+                    <div class="blog-card-footer">
+                        <span class="blog-author">
+                            <span class="blog-author-icon"><i class="bi bi-person"></i></span>
+                            Medicine Guide
+                        </span>
+
+                        <a href="error.html" class="blog-read-more" aria-label="Read article">
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-card" data-category="Personal Care">
+                <a href="error.html" class="blog-card-image-link" aria-label="Read the personal care article">
+                    <div class="blog-card-image-wrapper">
+                        <img src="Assets/blog5.webp" alt="Personal care products and skincare essentials" class="blog-card-image" loading="lazy" width="600" height="400">
+                        <span class="blog-image-label">PERSONAL CARE</span>
+                    </div>
+                </a>
+
+                <div class="blog-card-content">
+                    <div class="blog-card-meta">
+                        <span><i class="bi bi-calendar3"></i> Oct 02, 2026</span>
+                        <span><i class="bi bi-clock"></i> 4 min read</span>
+                    </div>
+
+                    <h3>
+                        <a href="error.html">Building a Simple and Consistent Personal Care Routine</a>
+                    </h3>
+
+                    <p>
+                        Explore the fundamentals of personal care and discover
+                        how consistency can help you maintain healthy habits.
+                    </p>
+
+                    <div class="blog-card-footer">
+                        <span class="blog-author">
+                            <span class="blog-author-icon"><i class="bi bi-person"></i></span>
+                            Personal Care
+                        </span>
+
+                        <a href="error.html" class="blog-read-more" aria-label="Read article">
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-card" data-category="Wellness">
+                <a href="error.html" class="blog-card-image-link" aria-label="Read the sleep and wellness article">
+                    <div class="blog-card-image-wrapper">
+                        <img src="Assets/blog6.webp" alt="Calm bedroom prepared for restful sleep" class="blog-card-image" loading="lazy" width="600" height="400">
+                        <span class="blog-image-label">WELLNESS</span>
+                    </div>
+                </a>
+
+                <div class="blog-card-content">
+                    <div class="blog-card-meta">
+                        <span><i class="bi bi-calendar3"></i> Sep 29, 2026</span>
+                        <span><i class="bi bi-clock"></i> 5 min read</span>
+                    </div>
+
+                    <h3>
+                        <a href="error.html">Understanding the Importance of Quality Sleep</a>
+                    </h3>
+
+                    <p>
+                        Explore everyday sleep habits and learn how a consistent
+                        sleep schedule can support general health.
+                    </p>
+
+                    <div class="blog-card-footer">
+                        <span class="blog-author">
+                            <span class="blog-author-icon"><i class="bi bi-person"></i></span>
+                            Health & Wellness
+                        </span>
+
+                        <a href="error.html" class="blog-read-more" aria-label="Read article">
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-card" data-category="Nutrition">
+                <a href="error.html" class="blog-card-image-link" aria-label="Read the hydration article">
+                    <div class="blog-card-image-wrapper">
+                        <img src="Assets/blog7.webp" alt="Glass of drinking water on a bright table" class="blog-card-image" loading="lazy" width="600" height="400">
+                        <span class="blog-image-label">NUTRITION</span>
+                    </div>
+                </a>
+
+                <div class="blog-card-content">
+                    <div class="blog-card-meta">
+                        <span><i class="bi bi-calendar3"></i> Sep 26, 2026</span>
+                        <span><i class="bi bi-clock"></i> 3 min read</span>
+                    </div>
+
+                    <h3>
+                        <a href="error.html">Everyday Hydration: Simple Ways to Drink Enough Water</a>
+                    </h3>
+
+                    <p>
+                        Learn practical ways to maintain healthy hydration habits
+                        throughout your day and daily activities.
+                    </p>
+
+                    <div class="blog-card-footer">
+                        <span class="blog-author">
+                            <span class="blog-author-icon"><i class="bi bi-person"></i></span>
+                            Nutrition Guide
+                        </span>
+
+                        <a href="error.html" class="blog-read-more" aria-label="Read article">
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <div class="blog-empty-state" hidden>
+            <i class="bi bi-journal-x"></i>
+            <h3>No articles found</h3>
+            <p>Choose another category to explore more articles.</p>
+        </div>
+
+        <div class="blog-bottom-cta">
+            <div class="blog-cta-icon">
+                <i class="bi bi-journal-medical"></i>
+            </div>
+
+            <div class="blog-cta-content">
+                <h3>Your journey to better health starts with knowledge.</h3>
+                <p>Explore more healthcare and wellness information.</p>
+            </div>
+
+            <a href="error.html" class="blog-cta-button">
+                Explore More
+                <i class="bi bi-arrow-up-right"></i>
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="blog-faq-section" id="blogFaq">
+
+    <div class="faq-container">
+
+        <div class="faq-header">
+            <span class="faq-eyebrow">
+                <span class="faq-eyebrow-dot"></span>
+                WE ARE HERE TO HELP
+            </span>
+
+            <h2>Frequently Asked <span>Questions</span></h2>
+
+            <p>
+                Find answers to common questions about our health articles,
+                pharmacy services, medicines, and wellness information.
+            </p>
+        </div>
+
+        <div class="faq-layout">
+
+            <div class="faq-sidebar">
+
+                <div class="faq-sidebar-icon">
+                    <i class="bi bi-chat-square-heart"></i>
+                </div>
+
+                <h3>Need a little help?</h3>
+
+                <p>
+                    We want your healthcare journey to feel simple.
+                    Explore the answers or reach out to our team.
+                </p>
+
+                <div class="faq-contact-item">
+                    <span class="faq-contact-icon">
+                        <i class="bi bi-envelope"></i>
+                    </span>
+
+                    <div>
+                        <strong>Email Support</strong>
+                        <span>We're happy to help</span>
+                    </div>
+                </div>
+
+                <div class="faq-contact-item">
+                    <span class="faq-contact-icon">
+                        <i class="bi bi-journal-medical"></i>
+                    </span>
+
+                    <div>
+                        <strong>Health Resources</strong>
+                        <span>Explore helpful articles</span>
+                    </div>
+                </div>
+
+                <a href="error.html" class="faq-contact-button">
+                    Contact Our Team
+                    <i class="bi bi-arrow-up-right"></i>
+                </a>
+
+                <div class="faq-sidebar-decoration">
+                    <i class="bi bi-heart-pulse"></i>
+                </div>
+
+            </div>
+
+            <div class="faq-list">
+
+                <article class="faq-item active">
+                    <button
+                        class="faq-question"
+                        type="button"
+                        id="faqQuestion1"
+                        aria-expanded="true"
+                        aria-controls="faqAnswer1"
+                    >
+                        <span class="faq-number">01</span>
+                        <span class="faq-question-text">What can I learn from the MediCare blog?</span>
+                        <span class="faq-toggle">
+                            <i class="bi bi-plus-lg"></i>
+                        </span>
+                    </button>
+
+                    <div
+                        class="faq-answer"
+                        id="faqAnswer1"
+                        role="region"
+                        aria-labelledby="faqQuestion1"
+                    >
+                        <div class="faq-answer-inner">
+                            Our blog covers general wellness, nutrition, personal care,
+                            medicine safety, and everyday healthcare topics. The articles
+                            are intended to support your understanding, not replace
+                            advice from a qualified healthcare professional.
+                        </div>
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button
+                        class="faq-question"
+                        type="button"
+                        id="faqQuestion2"
+                        aria-expanded="false"
+                        aria-controls="faqAnswer2"
+                    >
+                        <span class="faq-number">02</span>
+                        <span class="faq-question-text">Can I use blog articles to diagnose a health condition?</span>
+                        <span class="faq-toggle">
+                            <i class="bi bi-plus-lg"></i>
+                        </span>
+                    </button>
+
+                    <div
+                        class="faq-answer"
+                        id="faqAnswer2"
+                        role="region"
+                        aria-labelledby="faqQuestion2"
+                        hidden
+                    >
+                        <div class="faq-answer-inner">
+                            No. Blog articles provide general educational information
+                            and cannot diagnose medical conditions. Consult a qualified
+                            healthcare professional for diagnosis, treatment, or
+                            personalized medical advice.
+                        </div>
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button
+                        class="faq-question"
+                        type="button"
+                        id="faqQuestion3"
+                        aria-expanded="false"
+                        aria-controls="faqAnswer3"
+                    >
+                        <span class="faq-number">03</span>
+                        <span class="faq-question-text">How often are new health articles published?</span>
+                        <span class="faq-toggle">
+                            <i class="bi bi-plus-lg"></i>
+                        </span>
+                    </button>
+
+                    <div
+                        class="faq-answer"
+                        id="faqAnswer3"
+                        role="region"
+                        aria-labelledby="faqQuestion3"
+                        hidden
+                    >
+                        <div class="faq-answer-inner">
+                            New articles can be added as healthcare and wellness topics
+                            are reviewed. Check the blog regularly for new content and
+                            updates to existing articles.
+                        </div>
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button
+                        class="faq-question"
+                        type="button"
+                        id="faqQuestion4"
+                        aria-expanded="false"
+                        aria-controls="faqAnswer4"
+                    >
+                        <span class="faq-number">04</span>
+                        <span class="faq-question-text">Can I order medicines through MediCare?</span>
+                        <span class="faq-toggle">
+                            <i class="bi bi-plus-lg"></i>
+                        </span>
+                    </button>
+
+                    <div
+                        class="faq-answer"
+                        id="faqAnswer4"
+                        role="region"
+                        aria-labelledby="faqQuestion4"
+                        hidden
+                    >
+                        <div class="faq-answer-inner">
+                            Browse the shop to explore available products. Product
+                            availability, delivery eligibility, and prescription
+                            requirements may vary. Prescription medicines must be
+                            supplied in accordance with applicable regulations.
+                        </div>
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button
+                        class="faq-question"
+                        type="button"
+                        id="faqQuestion5"
+                        aria-expanded="false"
+                        aria-controls="faqAnswer5"
+                    >
+                        <span class="faq-number">05</span>
+                        <span class="faq-question-text">How should I store my medicines safely?</span>
+                        <span class="faq-toggle">
+                            <i class="bi bi-plus-lg"></i>
+                        </span>
+                    </button>
+
+                    <div
+                        class="faq-answer"
+                        id="faqAnswer5"
+                        role="region"
+                        aria-labelledby="faqQuestion5"
+                        hidden
+                    >
+                        <div class="faq-answer-inner">
+                            Follow the storage instructions on the medicine packaging
+                            or provided by your pharmacist. Keep medicines away from
+                            children, and pay attention to temperature, moisture,
+                            expiry dates, and any special storage requirements.
+                        </div>
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button
+                        class="faq-question"
+                        type="button"
+                        id="faqQuestion6"
+                        aria-expanded="false"
+                        aria-controls="faqAnswer6"
+                    >
+                        <span class="faq-number">06</span>
+                        <span class="faq-question-text">Where can I find more information about a medicine?</span>
+                        <span class="faq-toggle">
+                            <i class="bi bi-plus-lg"></i>
+                        </span>
+                    </button>
+
+                    <div
+                        class="faq-answer"
+                        id="faqAnswer6"
+                        role="region"
+                        aria-labelledby="faqQuestion6"
+                        hidden
+                    >
+                        <div class="faq-answer-inner">
+                            Read the official patient information leaflet and medicine
+                            label. Your pharmacist or prescribing healthcare professional
+                            can explain its intended use, possible side effects,
+                            interactions, and precautions.
+                        </div>
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button
+                        class="faq-question"
+                        type="button"
+                        id="faqQuestion7"
+                        aria-expanded="false"
+                        aria-controls="faqAnswer7"
+                    >
+                        <span class="faq-number">07</span>
+                        <span class="faq-question-text">How can I contact the MediCare team?</span>
+                        <span class="faq-toggle">
+                            <i class="bi bi-plus-lg"></i>
+                        </span>
+                    </button>
+
+                    <div
+                        class="faq-answer"
+                        id="faqAnswer7"
+                        role="region"
+                        aria-labelledby="faqQuestion7"
+                        hidden
+                    >
+                        <div class="faq-answer-inner">
+                            Visit the contact page to find the available support options.
+                            For urgent medical concerns, contact a qualified healthcare
+                            professional or your local emergency service.
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+        </div>
+
+        <div class="faq-bottom-banner">
+
+            <div class="faq-banner-icon">
+                <i class="bi bi-heart-pulse"></i>
+            </div>
+
+            <div class="faq-banner-content">
+                <h3>Your health questions matter.</h3>
+                <p>Explore our resources or get in touch with our team.</p>
+            </div>
+
+            <a href="error.html" class="faq-banner-button">
+                Get In Touch
+                <i class="bi bi-arrow-up-right"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer class="pharmacy-footer" id="footer">
+    <div class="footer-container">
+
+        <div class="footer-main">
+
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">
+                    <img
+                        src="Assets/blacklogo.webp"
+                        alt="Medicare Pharmacy Logo"
+                        class="footer-logo-image"
+                    >
+                </a>
+
+                <h3>Your Health, Our Priority.</h3>
+
+                <p class="footer-description">
+                    Discover healthcare essentials, personal care products,
+                    and everyday wellness solutions with Medicare.
+                    We're here to make your healthcare shopping simple
+                    and convenient.
+                </p>
+
+                <a href="error.html" class="footer-brand-link">
+                    Discover Our Store
+                    <i class="bi bi-arrow-up-right"></i>
+                </a>
+
+                <div class="footer-social">
+                    <h4>Follow Our Journey</h4>
+
+                    <div class="footer-social-links">
+                        <a href="error.html" aria-label="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+
+                        <a href="error.html" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+
+                        <a href="error.html" aria-label="LinkedIn">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+
+                        <a href="error.html" aria-label="YouTube">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-links-column">
+                <h3 class="footer-column-title">
+                    Quick Links
+                </h3>
+
+                <ul class="footer-links">
+                    <li>
+                        <a href="index.html">
+                            <i class="bi bi-chevron-right"></i>
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            <i class="bi bi-chevron-right"></i>
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="service.html">
+                            <i class="bi bi-chevron-right"></i>
+                            Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html">
+                            <i class="bi bi-chevron-right"></i>
+                            Shop
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="blog.html">
+                            <i class="bi bi-chevron-right"></i>
+                            Blog
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            <i class="bi bi-chevron-right"></i>
+                            Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-links-column">
+                <h3 class="footer-column-title">
+                    Customer Care
+                </h3>
+
+                <ul class="footer-links">
+                    <li>
+                        <a href="error.html">
+                            <i class="bi bi-chevron-right"></i>
+                            My Account
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="error.html">
+                            <i class="bi bi-chevron-right"></i>
+                            Track Order
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="error.html">
+                            <i class="bi bi-chevron-right"></i>
+                            Shipping Information
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="error.html">
+                            <i class="bi bi-chevron-right"></i>
+                            Returns & Refunds
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="error.html">
+                            <i class="bi bi-chevron-right"></i>
+                            FAQs
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="error.html">
+                            <i class="bi bi-chevron-right"></i>
+                            Privacy Policy
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-contact-column">
+                <h3 class="footer-column-title">
+                    Get In Touch
+                </h3>
+
+                <p class="footer-contact-description">
+                    Have questions about your shopping experience?
+                    We're here to help.
+                </p>
+
+                <a href="error.html" class="footer-contact-item">
+                    <span class="footer-contact-icon">
+                        <i class="bi bi-envelope"></i>
+                    </span>
+
+                    <span>
+                        <small>Email Us</small>
+                        <strong>support@medicare.com</strong>
+                    </span>
+                </a>
+
+                <a href="error.html" class="footer-contact-item">
+                    <span class="footer-contact-icon">
+                        <i class="bi bi-telephone"></i>
+                    </span>
+
+                    <span>
+                        <small>Call Us</small>
+                        <strong>+91 98765 43210</strong>
+                    </span>
+                </a>
+
+                <a href="error.html" class="footer-contact-item">
+                    <span class="footer-contact-icon">
+                        <i class="bi bi-geo-alt"></i>
+                    </span>
+
+                    <span>
+                        <small>Our Location</small>
+                        <strong>Visit Our Store</strong>
+                    </span>
+                </a>
+
+                <a href="error.html" class="footer-contact-button">
+                    Contact Support
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="footer-benefits">
+
+            <div class="footer-benefit">
+                <div class="footer-benefit-icon">
+                    <i class="bi bi-shield-check"></i>
+                </div>
+
+                <div>
+                    <h4>Quality You Can Trust</h4>
+                    <p>Thoughtfully sourced healthcare essentials.</p>
+                </div>
+            </div>
+
+            <div class="footer-benefit">
+                <div class="footer-benefit-icon">
+                    <i class="bi bi-truck"></i>
+                </div>
+
+                <div>
+                    <h4>Convenient Delivery</h4>
+                    <p>Healthcare shopping made convenient.</p>
+                </div>
+            </div>
+
+            <div class="footer-benefit">
+                <div class="footer-benefit-icon">
+                    <i class="bi bi-lock"></i>
+                </div>
+
+                <div>
+                    <h4>Secure Shopping</h4>
+                    <p>A secure and reliable shopping experience.</p>
+                </div>
+            </div>
+
+            <div class="footer-benefit">
+                <div class="footer-benefit-icon">
+                    <i class="bi bi-headset"></i>
+                </div>
+
+                <div>
+                    <h4>Customer Assistance</h4>
+                    <p>Support for your shopping questions.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p class="footer-copyright">
+                &copy; <span id="footerYear"></span> Medicare.
+                All rights reserved.
+            </p>
+
+            <div class="footer-legal-links">
+                <a href="error.html">Privacy Policy</a>
+                <span></span>
+                <a href="error.html">Terms & Conditions</a>
+                <span></span>
+                <a href="error.html">Cookie Policy</a>
+            </div>
+
+            
+
+        </div>
+
+    </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"></script>
+<script src="navbar.js"></script>
+<script src="blog.js"></script>
+</body>
+</html>

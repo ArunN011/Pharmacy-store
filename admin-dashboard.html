@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#173c32">
+    <title>MediCare | Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="admin-dashboard.css">
+</head>
+<body>
+
+<div class="admin-shell">
+
+    <aside class="admin-sidebar" id="adminSidebar">
+        <a href="admin-dashboard.html" class="sidebar-brand">
+            <img src="Assets/blacklogo.webp" alt="MediCare">
+        </a>
+
+        <div class="admin-profile">
+            <div class="admin-avatar">
+                <i class="bi bi-person-fill-gear"></i>
+            </div>
+            <div class="admin-profile-info">
+                <strong id="sidebarAdminName">Administrator</strong>
+                <span>Pharmacy Administrator</span>
+            </div>
+            <span class="admin-status"></span>
+        </div>
+
+        <div class="sidebar-section-title">ADMINISTRATION</div>
+
+        <nav class="sidebar-nav">
+            <a href="admin-dashboard.html" class="sidebar-link active">
+                <i class="bi bi-grid-1x2-fill"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="admin-orders.html" class="sidebar-link">
+                <i class="bi bi-bag-check-fill"></i>
+                <span>Manage Orders</span>
+            </a>
+
+            <a href="admin-products.html" class="sidebar-link">
+                <i class="bi bi-capsule-pill"></i>
+                <span>Manage Products</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="sidebar-security">
+                <i class="bi bi-shield-check"></i>
+                <div>
+                    <strong>Secure Admin Access</strong>
+                    <span>Protected dashboard</span>
+                </div>
+            </div>
+
+            <button type="button" class="logout-button" id="logoutButton">
+                <i class="bi bi-box-arrow-left"></i>
+                <span>Logout</span>
+            </button>
+        </div>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <main class="admin-main">
+
+        <header class="admin-header">
+            <div class="header-left">
+                <button type="button" class="mobile-menu-button" id="mobileMenuButton" aria-label="Open menu" aria-controls="adminSidebar" aria-expanded="false">
+                    <i class="bi bi-list"></i>
+                </button>
+
+                <a href="admin-dashboard.html" class="mobile-brand">
+                    <img src="Assets/blacklogo.webp" alt="MediCare">
+                </a>
+
+                <div class="desktop-heading">
+                    <span>PHARMACY MANAGEMENT</span>
+                    <h1>Admin Dashboard</h1>
+                </div>
+            </div>
+
+            <div class="header-actions">
+                <div class="header-date">
+                    <i class="bi bi-calendar3"></i>
+                    <span id="currentDate"></span>
+                </div>
+
+                <a href="error.html" class="header-notification" aria-label="Notifications">
+                    <i class="bi bi-bell"></i>
+                    <span></span>
+                </a>
+
+                <div class="header-admin">
+                    <div class="header-admin-avatar">
+                        <i class="bi bi-person-fill-gear"></i>
+                    </div>
+                    <div class="header-admin-info">
+                        <strong id="headerAdminName">Administrator</strong>
+                        <span>Super Admin</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="admin-content">
+
+            <section class="welcome-card">
+                <div class="welcome-content">
+                    <div class="welcome-date">
+                        <span class="live-indicator"></span>
+                        ADMINISTRATOR OVERVIEW
+                    </div>
+                    <h2>Welcome back,<br><span id="welcomeAdminName">Administrator</span></h2>
+                    <p>Manage your pharmacy, monitor orders, and keep healthcare essentials moving to customers.</p>
+
+                    <div class="welcome-actions">
+                        <a href="error.html" class="primary-action">
+                            <i class="bi bi-bag-check"></i>
+                            Manage Orders
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+
+                        <a href="error.html" class="secondary-action">
+                            <i class="bi bi-plus-circle"></i>
+                            Manage Products
+                        </a>
+                    </div>
+                </div>
+
+                <div class="welcome-visual">
+                    <div class="visual-ring ring-one"></div>
+                    <div class="visual-ring ring-two"></div>
+                    <div class="visual-icon">
+                        <i class="bi bi-heart-pulse-fill"></i>
+                    </div>
+                    <span class="visual-dot dot-one"></span>
+                    <span class="visual-dot dot-two"></span>
+                    <span class="visual-dot dot-three"></span>
+                    <div class="visual-caption">
+                        <i class="bi bi-shield-check"></i>
+                        Pharmacy Operations
+                    </div>
+                </div>
+            </section>
+
+            <section class="metrics-grid">
+
+                <article class="metric-card">
+                    <div class="metric-top">
+                        <span class="metric-icon green">
+                            <i class="bi bi-bag-check-fill"></i>
+                        </span>
+                        <span class="metric-label">ALL ORDERS</span>
+                    </div>
+                    <div class="metric-value-row">
+                        <h3>248</h3>
+                        <span class="metric-change positive">
+                            <i class="bi bi-arrow-up-right"></i> 12%
+                        </span>
+                    </div>
+                    <p>Total orders received</p>
+                    <div class="metric-progress">
+                        <span style="width: 76%"></span>
+                    </div>
+                </article>
+
+                <article class="metric-card">
+                    <div class="metric-top">
+                        <span class="metric-icon orange">
+                            <i class="bi bi-hourglass-split"></i>
+                        </span>
+                        <span class="metric-label">PENDING ORDERS</span>
+                    </div>
+                    <div class="metric-value-row">
+                        <h3>18</h3>
+                        <span class="metric-change warning">
+                            <i class="bi bi-clock"></i> Pending
+                        </span>
+                    </div>
+                    <p>Orders awaiting processing</p>
+                    <div class="metric-progress orange-progress">
+                        <span style="width: 32%"></span>
+                    </div>
+                </article>
+
+                <article class="metric-card">
+                    <div class="metric-top">
+                        <span class="metric-icon blue">
+                            <i class="bi bi-capsule-pill"></i>
+                        </span>
+                        <span class="metric-label">TOTAL PRODUCTS</span>
+                    </div>
+                    <div class="metric-value-row">
+                        <h3>156</h3>
+                        <span class="metric-change positive">
+                            <i class="bi bi-check-circle"></i> Listed
+                        </span>
+                    </div>
+                    <p>Products in the catalog</p>
+                    <div class="metric-progress blue-progress">
+                        <span style="width: 84%"></span>
+                    </div>
+                </article>
+
+                <article class="metric-card">
+                    <div class="metric-top">
+                        <span class="metric-icon purple">
+                            <i class="bi bi-currency-rupee"></i>
+                        </span>
+                        <span class="metric-label">TOTAL REVENUE</span>
+                    </div>
+                    <div class="metric-value-row">
+                        <h3>₹48,650</h3>
+                        <span class="metric-change positive">
+                            <i class="bi bi-arrow-up-right"></i> 8.4%
+                        </span>
+                    </div>
+                    <p>Sample sales overview</p>
+                    <div class="metric-progress purple-progress">
+                        <span style="width: 68%"></span>
+                    </div>
+                </article>
+
+            </section>
+
+            <section class="dashboard-grid">
+
+                <article class="dashboard-panel orders-panel">
+                    <div class="panel-header">
+                        <div>
+                            <span class="panel-eyebrow">ORDER MANAGEMENT</span>
+                            <h3>Recent Orders</h3>
+                            <p>Review the latest customer orders.</p>
+                        </div>
+
+                        <a href="admin-orders.html" class="view-all">
+                            View All <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="table-wrapper">
+                        <table class="orders-table">
+                            <thead>
+                                <tr>
+                                    <th>ORDER ID</th>
+                                    <th>CUSTOMER</th>
+                                    <th>PRODUCT</th>
+                                    <th>AMOUNT</th>
+                                    <th>STATUS</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td><strong>#MED1001</strong></td>
+                                    <td>
+                                        <div class="customer-cell">
+                                            <span class="customer-avatar avatar-green">RK</span>
+                                            <span>Rahul Kumar</span>
+                                        </div>
+                                    </td>
+                                    <td>Vitamin C Tablets</td>
+                                    <td class="amount">₹199</td>
+                                    <td><span class="order-status delivered">Delivered</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><strong>#MED1002</strong></td>
+                                    <td>
+                                        <div class="customer-cell">
+                                            <span class="customer-avatar avatar-orange">SP</span>
+                                            <span>Sneha Patel</span>
+                                        </div>
+                                    </td>
+                                    <td>Digital Thermometer</td>
+                                    <td class="amount">₹349</td>
+                                    <td><span class="order-status processing">Processing</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><strong>#MED1003</strong></td>
+                                    <td>
+                                        <div class="customer-cell">
+                                            <span class="customer-avatar avatar-blue">AK</span>
+                                            <span>Arun Kumar</span>
+                                        </div>
+                                    </td>
+                                    <td>First Aid Kit</td>
+                                    <td class="amount">₹549</td>
+                                    <td><span class="order-status pending">Pending</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><strong>#MED1004</strong></td>
+                                    <td>
+                                        <div class="customer-cell">
+                                            <span class="customer-avatar avatar-purple">PM</span>
+                                            <span>Priya Mehta</span>
+                                        </div>
+                                    </td>
+                                    <td>Health Essentials</td>
+                                    <td class="amount">₹799</td>
+                                    <td><span class="order-status shipped">Shipped</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><strong>#MED1005</strong></td>
+                                    <td>
+                                        <div class="customer-cell">
+                                            <span class="customer-avatar avatar-pink">VK</span>
+                                            <span>Vijay Kumar</span>
+                                        </div>
+                                    </td>
+                                    <td>Personal Care Kit</td>
+                                    <td class="amount">₹299</td>
+                                    <td><span class="order-status delivered">Delivered</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+
+                <article class="dashboard-panel inventory-panel">
+                    <div class="panel-header">
+                        <div>
+                            <span class="panel-eyebrow">STOCK MONITORING</span>
+                            <h3>Inventory Overview</h3>
+                            <p>Sample product availability.</p>
+                        </div>
+
+                        <span class="inventory-total">156 items</span>
+                    </div>
+
+                    <div class="inventory-summary">
+                        <div class="inventory-summary-item">
+                            <span class="inventory-dot stock-good"></span>
+                            <span>In Stock</span>
+                            <strong>128</strong>
+                        </div>
+
+                        <div class="inventory-summary-item">
+                            <span class="inventory-dot stock-low"></span>
+                            <span>Low Stock</span>
+                            <strong>21</strong>
+                        </div>
+
+                        <div class="inventory-summary-item">
+                            <span class="inventory-dot stock-out"></span>
+                            <span>Out of Stock</span>
+                            <strong>7</strong>
+                        </div>
+                    </div>
+
+                    <div class="inventory-bar">
+                        <span class="bar-good"></span>
+                        <span class="bar-low"></span>
+                        <span class="bar-out"></span>
+                    </div>
+
+                    <div class="inventory-note">
+                        <i class="bi bi-info-circle"></i>
+                        <span>Review low-stock items to help maintain product availability.</span>
+                    </div>
+
+                    <a href="error.html" class="inventory-action">
+                        Manage Inventory
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </article>
+
+            </section>
+
+            <section class="quick-actions-section">
+                <div class="section-heading">
+                    <div>
+                        <span class="panel-eyebrow">QUICK ACCESS</span>
+                        <h3>Manage Your Pharmacy</h3>
+                    </div>
+                </div>
+
+                <div class="quick-actions-grid">
+
+                    <a href="error.html" class="quick-action-card">
+                        <span class="quick-action-icon green">
+                            <i class="bi bi-bag-check"></i>
+                        </span>
+                        <div>
+                            <strong>Manage Orders</strong>
+                            <p>Review and update customer orders.</p>
+                        </div>
+                        <i class="bi bi-arrow-up-right quick-arrow"></i>
+                    </a>
+
+                    <a href="error.html" class="quick-action-card">
+                        <span class="quick-action-icon blue">
+                            <i class="bi bi-capsule-pill"></i>
+                        </span>
+                        <div>
+                            <strong>Manage Products</strong>
+                            <p>Review products and stock details.</p>
+                        </div>
+                        <i class="bi bi-arrow-up-right quick-arrow"></i>
+                    </a>
+
+                    <a href="error.html" class="quick-action-card">
+                        <span class="quick-action-icon orange">
+                            <i class="bi bi-graph-up-arrow"></i>
+                        </span>
+                        <div>
+                            <strong>Sales Reports</strong>
+                            <p>Explore pharmacy sales information.</p>
+                        </div>
+                        <i class="bi bi-arrow-up-right quick-arrow"></i>
+                    </a>
+
+                </div>
+            </section>
+
+            <section class="admin-tip">
+                <span class="tip-icon"><i class="bi bi-lightbulb"></i></span>
+                <div>
+                    <strong>Pharmacy Management Tip</strong>
+                    <p>Check pending orders and low-stock products regularly to help ensure a smoother customer experience.</p>
+                </div>
+            </section>
+
+            <footer class="admin-footer">
+                <span>© <span id="currentYear"></span> MediCare Pharmacy</span>
+                <span>ADMINISTRATION PORTAL</span>
+            </footer>
+
+        </div>
+    </main>
+</div>
+
+<script src="admin-dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+<header class="pharmacy-navbar">
+    <div class="navbar-container">
+
+        <a href="index.html" class="pharmacy-logo">
+            <img src="Assets/blacklogo.webp" alt="MediCare Pharmacy Logo">
+        </a>
+
+        <nav class="desktop-navigation" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active" aria-current="page">About Us</a>
+            <a href="service.html">Service</a>
+            <a href="shop.html">Shop</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+
+        <div class="navbar-actions">
+            <a href="login.html" class="nav-login">Login</a>
+            <a href="register.html" class="nav-register">Register</a>
+        </div>
+
+        <button
+            class="hamburger-button"
+            id="menuOpen"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-controls="mobileSidebar"
+            aria-expanded="false">
+            <i class="bi bi-list"></i>
+        </button>
+
+    </div>
+</header>
+
+<div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
+
+<aside
+    class="mobile-sidebar"
+    id="mobileSidebar"
+    aria-label="Mobile navigation"
+    aria-hidden="true"
+    inert>
+
+    <div class="sidebar-header">
+        <a href="index.html" class="sidebar-logo">
+            <img src="Assets/blacklogo.webp" alt="MediCare Pharmacy Logo">
+        </a>
+
+        <button
+            type="button"
+            class="sidebar-close"
+            id="menuClose"
+            aria-label="Close navigation menu">
+            <i class="bi bi-x-lg"></i>
+        </button>
+    </div>
+
+    <nav class="sidebar-navigation" aria-label="Mobile navigation links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="service.html">Service</a>
+        <a href="shop.html">Shop</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <div class="sidebar-actions">
+        <a href="login.html" class="sidebar-login">Login</a>
+        <a href="register.html" class="sidebar-register">Register</a>
+    </div>
+
+</aside>
+
+<section class="about-hero" id="about-hero">
+    <div class="about-hero-bg-shape about-shape-one"></div>
+    <div class="about-hero-bg-shape about-shape-two"></div>
+
+    <div class="about-hero-container">
+        <div class="about-hero-content">
+            <div class="about-hero-breadcrumb">
+               
+                
+            </div>
+
+            <div class="about-hero-label">
+                <span class="about-label-line"></span>
+                <span>GET TO KNOW US</span>
+            </div>
+
+            <h1>
+                Your Health Is Our
+                <span>First Priority.</span>
+            </h1>
+
+            <p class="about-hero-description">
+                We believe everyone deserves access to trusted healthcare.
+                From quality medicines to everyday wellness essentials,
+                we are here to make caring for yourself and your family
+                simpler, safer, and more convenient.
+            </p>
+
+            <div class="about-hero-actions">
+                <a href="error.html" class="about-primary-btn">
+                    Discover Our Story
+                    <i class="bi bi-arrow-up-right"></i>
+                </a>
+
+                <a href="error.html" class="about-secondary-btn">
+                    <span class="about-play-icon">
+                        <i class="bi bi-play-fill"></i>
+                    </span>
+                    <span>Why Choose Us</span>
+                </a>
+            </div>
+
+            <div class="about-hero-stats">
+                <div class="about-stat-item">
+                    <div class="about-stat-number">
+                        <span class="about-counter" data-count="10">0</span><span>+</span>
+                    </div>
+                    <p>Years of Care</p>
+                </div>
+
+                <div class="about-stat-divider"></div>
+
+                <div class="about-stat-item">
+                    <div class="about-stat-number">
+                        <span class="about-counter" data-count="25">0</span><span>K+</span>
+                    </div>
+                    <p>Happy Customers</p>
+                </div>
+
+                <div class="about-stat-divider"></div>
+
+                <div class="about-stat-item">
+                    <div class="about-stat-number">
+                        <span class="about-counter" data-count="500">0</span><span>+</span>
+                    </div>
+                    <p>Wellness Products</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-hero-visual">
+            <div class="about-image-backdrop"></div>
+
+            <div class="about-image-frame">
+                <img
+                    src="Assets/banner2.webp"
+                    alt="Pharmacist helping a customer in a modern pharmacy"
+                    class="about-main-image"
+                >
+
+                <div class="about-image-overlay"></div>
+
+                <div class="about-image-caption">
+                    <div class="about-caption-icon">
+                        <i class="bi bi-heart-pulse"></i>
+                    </div>
+                    <div>
+                        <h3>Care You Can Trust</h3>
+                        <p>Your wellness matters to us.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-floating-card about-quality-card">
+                <div class="about-floating-icon">
+                    <i class="bi bi-shield-check"></i>
+                </div>
+                <div>
+                    <h4>Quality Assured</h4>
+                    <p>Carefully selected products</p>
+                </div>
+            </div>
+
+            <div class="about-floating-card about-care-card">
+                <div class="about-care-avatars">
+                    <span><i class="bi bi-person-fill"></i></span>
+                    <span><i class="bi bi-person-fill"></i></span>
+                    <span><i class="bi bi-person-fill"></i></span>
+                </div>
+                <div>
+                    <h4>People First</h4>
+                    <p>Your health comes first</p>
+                </div>
+            </div>
+
+            <div class="about-decorative-circle"></div>
+        </div>
+    </div>
+
+    <div class="about-hero-bottom">
+        <div class="about-bottom-inner">
+            <div class="about-bottom-item">
+                <i class="bi bi-patch-check"></i>
+                <span>Quality Products</span>
+            </div>
+
+            <div class="about-bottom-item">
+                <i class="bi bi-truck"></i>
+                <span>Convenient Delivery</span>
+            </div>
+
+            <div class="about-bottom-item">
+                <i class="bi bi-shield-lock"></i>
+                <span>Secure Shopping</span>
+            </div>
+
+            <div class="about-bottom-item">
+                <i class="bi bi-headset"></i>
+                <span>Customer Support</span>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="about-story-section" id="about-story">
+    <div class="about-story-container">
+
+        <div class="about-story-visual">
+            <div class="story-image-wrapper">
+                <img
+                    src="Assets/banner3.webp"
+                    alt="Pharmacy team providing healthcare support"
+                    class="story-main-image"
+                    loading="lazy"
+                >
+
+                <div class="story-image-decoration"></div>
+            </div>
+
+            <div class="story-experience-card">
+                <div class="story-experience-icon">
+                    <i class="bi bi-heart-pulse"></i>
+                </div>
+
+                <div class="story-experience-content">
+                    <h3>Care Comes First</h3>
+                    <p>Your well-being inspires everything we do.</p>
+                </div>
+            </div>
+
+            <div class="story-image-caption">
+                <i class="bi bi-shield-check"></i>
+                <span>Committed to Your Wellness</span>
+            </div>
+        </div>
+
+        <div class="about-story-content">
+
+            <div class="story-section-label">
+                <span></span>
+                OUR STORY
+            </div>
+
+            <h2>
+                Making Healthcare
+                <span>More Personal.</span>
+            </h2>
+
+            <p class="story-intro">
+                At MediCare, we believe healthcare should feel simple,
+                accessible, and personal. Our journey began with a clear
+                purpose: to help people make confident choices about
+                their health and everyday wellness.
+            </p>
+
+            <p class="story-description">
+                We bring together carefully selected healthcare products,
+                convenient shopping, and customer-focused service to make
+                your wellness journey easier. Whether you are looking for
+                everyday essentials or products to support your family's
+                needs, we aim to make every experience reliable and
+                straightforward.
+            </p>
+
+            <div class="story-values">
+
+                <div class="story-value-item">
+                    <div class="story-value-icon">
+                        <i class="bi bi-patch-check"></i>
+                    </div>
+
+                    <div>
+                        <h3>Quality First</h3>
+                        <p>Products selected with care.</p>
+                    </div>
+                </div>
+
+                <div class="story-value-item">
+                    <div class="story-value-icon">
+                        <i class="bi bi-people"></i>
+                    </div>
+
+                    <div>
+                        <h3>People Matter</h3>
+                        <p>Your needs guide our service.</p>
+                    </div>
+                </div>
+
+                <div class="story-value-item">
+                    <div class="story-value-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+
+                    <div>
+                        <h3>Trust & Care</h3>
+                        <p>A dependable shopping experience.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <a href="error.html" class="story-discover-btn">
+                Discover Our Approach
+                <i class="bi bi-arrow-up-right"></i>
+            </a>
+
+        </div>
+
+    </div>
+</section>
+<section class="mission-vision-section" id="mission-vision">
+    <div class="mv-container">
+
+        <div class="mv-heading">
+            <span class="mv-eyebrow">
+                <span class="mv-eyebrow-line"></span>
+                WHAT DRIVES US
+            </span>
+
+            <h2>
+                Our Purpose. <span>Our Promise.</span>
+            </h2>
+
+            <p>
+                Everything we do is guided by a commitment to making
+                healthcare more accessible, convenient, and trustworthy
+                for every customer.
+            </p>
+        </div>
+
+        <div class="mv-grid">
+
+            <article class="mv-card mv-mission-card">
+                <div class="mv-card-top">
+                    <div class="mv-icon-wrapper">
+                        <i class="bi bi-heart-pulse"></i>
+                    </div>
+
+                    <span class="mv-card-number">01</span>
+                </div>
+
+                <span class="mv-card-label">OUR MISSION</span>
+
+                <h3>
+                    Making Everyday
+                    <span>Healthcare Easier.</span>
+                </h3>
+
+                <p>
+                    Our mission is to simplify everyday healthcare by
+                    offering carefully selected wellness products,
+                    convenient shopping, and dependable customer support.
+                    We want every customer to feel informed, supported,
+                    and confident throughout their wellness journey.
+                </p>
+
+                <div class="mv-card-footer">
+                    <a href="error.html" class="mv-card-link">
+                        Discover Our Approach
+                        <i class="bi bi-arrow-up-right"></i>
+                    </a>
+                </div>
+
+                <div class="mv-card-decoration"></div>
+            </article>
+
+            <article class="mv-card mv-vision-card">
+                <div class="mv-card-top">
+                    <div class="mv-icon-wrapper">
+                        <i class="bi bi-eye"></i>
+                    </div>
+
+                    <span class="mv-card-number">02</span>
+                </div>
+
+                <span class="mv-card-label">OUR VISION</span>
+
+                <h3>
+                    A Healthier Future
+                    <span>For Everyone.</span>
+                </h3>
+
+                <p>
+                    Our vision is to build a trusted healthcare shopping
+                    destination where quality, convenience, and
+                    customer care come together. We aspire to help
+                    individuals and families make better-informed
+                    choices for their everyday wellness needs.
+                </p>
+
+                <div class="mv-card-footer">
+                    <a href="error.html" class="mv-card-link">
+                        Explore Our Vision
+                        <i class="bi bi-arrow-up-right"></i>
+                    </a>
+                </div>
+
+                <div class="mv-card-decoration"></div>
+            </article>
+
+        </div>
+
+        <br>
+
+        <div class="mv-bottom-note">
+            <div class="mv-note-icon">
+                <i class="bi bi-shield-check"></i>
+            </div>
+
+            <p>
+                <strong>Care with purpose.</strong>
+                Every step we take is focused on a better customer experience.
+            </p>
+
+            <a href="error.html" aria-label="Learn more about our values">
+                <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
+
+    </div>
+</section>
+<section class="about-values-section" id="about-values">
+    <div class="values-container">
+
+        <div class="values-heading">
+            <span class="values-eyebrow">
+                <span class="values-eyebrow-line"></span>
+                WHAT WE BELIEVE IN
+                <span class="values-eyebrow-line"></span>
+            </span>
+
+            <h2>
+                The Values Behind
+                <span>Every Decision.</span>
+            </h2>
+
+            <p>
+                Our values shape how we serve our customers, select our
+                products, and build a better healthcare shopping experience.
+            </p>
+        </div>
+
+        <div class="values-grid">
+
+            <article class="value-card">
+                <div class="value-card-header">
+                    <div class="value-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <span class="value-number">01</span>
+                </div>
+
+                <h3>Trust & Transparency</h3>
+
+                <p>
+                    We believe in clear information, honest communication,
+                    and helping customers make informed healthcare choices.
+                </p>
+                     <a heref="error.html" class="value-card-link">
+                <div class="value-card-bottom">
+                    <span>Built on trust</span>
+                    <i class="bi bi-arrow-up-right"></i>
+                </a>
+                </div>
+            </article>
+
+            <article class="value-card">
+                <div class="value-card-header">
+                    <div class="value-icon">
+                        <i class="bi bi-patch-check"></i>
+                    </div>
+                    <span class="value-number">02</span>
+                </div>
+
+                <h3>Quality & Safety</h3>
+
+                <p>
+                    We prioritize responsible product selection and aim
+                    to provide reliable healthcare and wellness essentials.
+                </p>
+                    <a heref="error.html" class="value-card-link">
+                <div class="value-card-bottom">
+                    <span>Quality matters</span>
+                    <i class="bi bi-arrow-up-right"></i>
+                </a>
+                </div>
+            </article>
+
+            <article class="value-card">
+                <div class="value-card-header">
+                    <div class="value-icon">
+                        <i class="bi bi-heart"></i>
+                    </div>
+                    <span class="value-number">03</span>
+                </div>
+
+                <h3>People First</h3>
+
+                <p>
+                    Every customer matters to us. We strive to make
+                    healthcare shopping comfortable, accessible, and convenient.
+                </p>
+                   <a heref="error.html" class="value-card-link">
+                <div class="value-card-bottom">
+                    <span>Care with purpose</span>
+                    <i class="bi bi-arrow-up-right"></i>
+                </a>
+                </div>
+            </article>
+
+            <article class="value-card">
+                <div class="value-card-header">
+                    <div class="value-icon">
+                        <i class="bi bi-lightbulb"></i>
+                    </div>
+                    <span class="value-number">04</span>
+                </div>
+
+                <h3>Continuous Improvement</h3>
+
+                <p>
+                    We continually look for ways to improve our services,
+                    simplify shopping, and better support customer needs.
+                </p>
+
+                <a heref="error.html" class="value-card-link">
+                <div class="value-card-bottom">
+                    
+        
+                    <span>Always improving</span>
+                    <i class="bi bi-arrow-up-right"></i>
+                    </a>
+                </div>
+            </article>
+
+        </div>
+        <br>
+
+        <div class="values-bottom">
+            <div class="values-bottom-content">
+                <div class="values-bottom-icon">
+                    <i class="bi bi-heart-pulse"></i>
+                </div>
+
+                <div>
+                    <h3>Healthcare with a Human Touch</h3>
+                    <p>
+                        Thoughtful service and customer well-being guide our approach.
+                    </p>
+                </div>
+            </div>
+
+            <a href="error.html" class="values-bottom-btn">
+                Learn More About Us
+                <i class="bi bi-arrow-up-right"></i>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<section class="about-team-section" id="about-team">
+    <div class="team-container">
+
+        <div class="team-heading">
+            <span class="team-eyebrow">
+                <span class="team-eyebrow-line"></span>
+                MEET OUR TEAM
+                <span class="team-eyebrow-line"></span>
+            </span>
+
+            <h2>
+                The People Behind <span>MediCare.</span>
+            </h2>
+
+            <p>
+                Meet the dedicated people working together to make your
+                healthcare shopping experience more convenient and reliable.
+            </p>
+        </div>
+
+        <div class="team-grid">
+
+            <article class="team-card">
+                <div class="team-image-wrapper">
+                    <img
+                        src="Assets/doctor2.webp"
+                        alt="Healthcare advisor"
+                        class="team-image"
+                        loading="lazy"
+                    >
+
+                    <div class="team-image-overlay"></div>
+
+                    <div class="team-social-links">
+                        <a href="error.html" aria-label="LinkedIn profile">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+
+                        <a href="error.html" aria-label="Instagram profile">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                    </div>
+
+                    <span class="team-member-number">01</span>
+                </div>
+
+                <div class="team-member-info">
+                    <div class="team-member-details">
+                        <h3>Dr. Ananya Sharma</h3>
+                        <p>Healthcare Advisor</p>
+                    </div>
+
+                    <a
+                        href="error.html"
+                        class="team-member-link"
+                        aria-label="View team member"
+                    >
+                        <i class="bi bi-arrow-up-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <article class="team-card">
+                <div class="team-image-wrapper">
+                    <img
+                        src="Assets/doctor3.webp"
+                        alt="Pharmacy consultant"
+                        class="team-image"
+                        loading="lazy"
+                    >
+
+                    <div class="team-image-overlay"></div>
+
+                    <div class="team-social-links">
+                        <a href="error.html" aria-label="LinkedIn profile">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+
+                        <a href="error.html" aria-label="Instagram profile">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                    </div>
+
+                    <span class="team-member-number">02</span>
+                </div>
+
+                <div class="team-member-info">
+                    <div class="team-member-details">
+                        <h3>Dr. Rahul Mehta</h3>
+                        <p>Pharmacy Consultant</p>
+                    </div>
+
+                    <a
+                        href="error.html"
+                        class="team-member-link"
+                        aria-label="View team member"
+                    >
+                        <i class="bi bi-arrow-up-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <article class="team-card">
+                <div class="team-image-wrapper">
+                    <img
+                        src="Assets/doctor5.webp"
+                        alt="Wellness specialist"
+                        class="team-image"
+                        loading="lazy"
+                    >
+
+                    <div class="team-image-overlay"></div>
+
+                    <div class="team-social-links">
+                        <a href="error.html" aria-label="LinkedIn profile">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+
+                        <a href="error.html" aria-label="Instagram profile">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                    </div>
+
+                    <span class="team-member-number">03</span>
+                </div>
+
+                <div class="team-member-info">
+                    <div class="team-member-details">
+                        <h3>Dr. Priya Nair</h3>
+                        <p>Wellness Specialist</p>
+                    </div>
+
+                    <a
+                        href="error.html"
+                        class="team-member-link"
+                        aria-label="View team member"
+                    >
+                        <i class="bi bi-arrow-up-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <article class="team-card">
+                <div class="team-image-wrapper">
+                    <img
+                        src="Assets/doctor4.webp"
+                        alt="Customer care team member"
+                        class="team-image"
+                        loading="lazy"
+                    >
+
+                    <div class="team-image-overlay"></div>
+
+                    <div class="team-social-links">
+                        <a href="error.html" aria-label="LinkedIn profile">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+
+                        <a href="error.html" aria-label="Instagram profile">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                    </div>
+
+                    <span class="team-member-number">04</span>
+                </div>
+
+                <div class="team-member-info">
+                    <div class="team-member-details">
+                        <h3>Arjun Kumar</h3>
+                        <p>Customer Care Lead</p>
+                    </div>
+
+                    <a
+                        href="error.html"
+                        class="team-member-link"
+                        aria-label="View team member"
+                    >
+                        <i class="bi bi-arrow-up-right"></i>
+                    </a>
+                </div>
+            </article>
+
+        </div>
+
+        <div class="team-bottom">
+            <div class="team-bottom-content">
+                <div class="team-bottom-icon">
+                    <i class="bi bi-heart-pulse"></i>
+                </div>
+
+                <div>
+                    <h3>Care Is a Team Effort</h3>
+                    <p>
+                        Working together to create a better healthcare experience.
+                    </p>
+                </div>
+            </div>
+
+            <a href="error.html" class="team-contact-btn">
+                Connect With Our Team
+                <i class="bi bi-arrow-up-right"></i>
+            </a>
+        </div>
+
+    </div>
+</section>
+<section class="why-choose-section" id="why-choose">
+    <div class="why-choose-container">
+
+        <div class="why-choose-heading">
+            <span class="why-choose-label">
+                <span class="label-line"></span>
+                WHY CHOOSE MEDICARE
+            </span>
+
+            <h2>
+                Your Health Deserves
+                <span>Better Care</span>
+            </h2>
+
+            <p>
+                We make healthcare shopping simple, safe, and convenient
+                with trusted products and personalized support for your
+                everyday wellness needs.
+            </p>
+        </div>
+
+        <div class="why-choose-content">
+
+            <div class="why-choose-visual">
+                <div class="visual-image">
+                    <img
+                        src="Assets/banner3.webp"
+                        alt="Pharmacist assisting a customer"
+                        loading="lazy"
+                    >
+
+                    <div class="visual-overlay"></div>
+
+                    <div class="visual-caption">
+                        <span class="caption-icon">
+                            <i class="bi bi-heart-pulse"></i>
+                        </span>
+
+                        <div>
+                            <h3>Your Wellness, Our Priority</h3>
+                            <p>Care you can count on every day.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="visual-badge">
+                    <i class="bi bi-shield-check"></i>
+                    <div>
+                        <strong>Trusted Care</strong>
+                        <span>Every step of the way</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="why-choose-features">
+
+                <a href="error.html" class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+
+                    <div class="feature-content">
+                        <h3>Trusted Quality</h3>
+                        <p>
+                            Shop healthcare products selected with quality
+                            and customer safety in mind.
+                        </p>
+                    </div>
+
+                    <span class="feature-arrow">
+                        <i class="bi bi-arrow-up-right"></i>
+                    </span>
+                </a>
+
+                <a href="error.html" class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-truck"></i>
+                    </div>
+
+                    <div class="feature-content">
+                        <h3>Convenient Delivery</h3>
+                        <p>
+                            Enjoy a convenient ordering experience and
+                            reliable delivery options.
+                        </p>
+                    </div>
+
+                    <span class="feature-arrow">
+                        <i class="bi bi-arrow-up-right"></i>
+                    </span>
+                </a>
+
+                <a href="error.html" class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-headset"></i>
+                    </div>
+
+                    <div class="feature-content">
+                        <h3>Dedicated Support</h3>
+                        <p>
+                            Get friendly assistance when you need help
+                            with your healthcare shopping.
+                        </p>
+                    </div>
+
+                    <span class="feature-arrow">
+                        <i class="bi bi-arrow-up-right"></i>
+                    </span>
+                </a>
+
+                <a href="error.html" class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-capsule"></i>
+                    </div>
+
+                    <div class="feature-content">
+                        <h3>Everyday Wellness</h3>
+                        <p>
+                            Discover pharmacy essentials and wellness
+                            products for your daily routine.
+                        </p>
+                    </div>
+
+                    <span class="feature-arrow">
+                        <i class="bi bi-arrow-up-right"></i>
+                    </span>
+                </a>
+
+            </div>
+        </div>
+
+        <div class="why-choose-bottom">
+            <div class="bottom-content">
+                <span class="bottom-icon">
+                    <i class="bi bi-heart-pulse"></i>
+                </span>
+
+                <div>
+                    <h3>Making better health choices easier.</h3>
+                    <p>
+                        Discover a convenient way to shop for your
+                        healthcare essentials.
+                    </p>
+                </div>
+            </div>
+
+            <a href="error.html" class="why-choose-btn">
+                Explore Our Products
+                <i class="bi bi-arrow-up-right"></i>
+            </a>
+        </div>
+
+    </div>
+</section>
+<section class="testimonials-section" id="testimonials">
+    <div class="testimonials-container">
+
+        <div class="testimonials-heading">
+            <span class="testimonials-label">
+                <span class="label-line"></span>
+                CUSTOMER TESTIMONIALS
+                <span class="label-line"></span>
+            </span>
+
+            <h2>
+                Real Stories.
+                <span>Better Care.</span>
+            </h2>
+
+            <p>
+                Discover what customers appreciate about the MediCare
+                shopping experience. We strive to make healthcare shopping
+                simple, convenient, and accessible.
+            </p>
+        </div>
+
+        <div class="testimonials-summary">
+            <div class="summary-rating">
+                <div class="rating-number">4.9</div>
+
+                <div class="rating-details">
+                    <div class="rating-stars" aria-label="5 out of 5 stars">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+
+                    <p>Committed to better customer experiences</p>
+                </div>
+            </div>
+
+            <div class="summary-divider"></div>
+
+            <div class="summary-message">
+                <div class="summary-message-icon">
+                    <i class="bi bi-heart-pulse"></i>
+                </div>
+
+                <div>
+                    <strong>Your wellness matters</strong>
+                    <p>
+                        Thoughtful service and convenient healthcare shopping.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonials-grid">
+
+            <article class="testimonial-card">
+                <div class="testimonial-card-top">
+                    <div class="testimonial-quote">
+                        <i class="bi bi-quote"></i>
+                    </div>
+
+                    <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                </div>
+
+                <span class="testimonial-category">
+                    SHOPPING EXPERIENCE
+                </span>
+
+                <p class="testimonial-text">
+                    The website is easy to navigate, and finding everyday
+                    healthcare essentials is straightforward. I appreciate
+                    having products organized in a clean, simple layout.
+                </p>
+
+                <div class="testimonial-divider"></div>
+
+                <div class="testimonial-author">
+                    <img
+                        src="Assets/IT18.webp"
+                        alt="Customer profile"
+                        loading="lazy"
+                    >
+
+                    <div class="author-details">
+                        <h3>Priya S.</h3>
+                        <span>Healthcare Shopper</span>
+                    </div>
+
+                    <span class="verified-icon" aria-label="Customer feedback">
+                        <i class="bi bi-patch-check-fill"></i>
+                    </span>
+                </div>
+            </article>
+
+            <article class="testimonial-card featured-testimonial">
+                <div class="testimonial-card-top">
+                    <div class="testimonial-quote">
+                        <i class="bi bi-quote"></i>
+                    </div>
+
+                    <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                </div>
+
+                <span class="testimonial-category">
+                    PRODUCT DISCOVERY
+                </span>
+
+                <p class="testimonial-text">
+                    I like how pharmacy essentials and wellness products
+                    can be explored in one place. The organized presentation
+                    makes browsing products much more convenient.
+                </p>
+
+                <div class="testimonial-divider"></div>
+
+                <div class="testimonial-author">
+                    <img
+                        src="Assets/IT20.webp"
+                        alt="Customer profile"
+                        loading="lazy"
+                    >
+
+                    <div class="author-details">
+                        <h3>Rahul M.</h3>
+                        <span>Wellness Customer</span>
+                    </div>
+
+                    <span class="verified-icon" aria-label="Customer feedback">
+                        <i class="bi bi-patch-check-fill"></i>
+                    </span>
+                </div>
+            </article>
+
+            <article class="testimonial-card">
+                <div class="testimonial-card-top">
+                    <div class="testimonial-quote">
+                        <i class="bi bi-quote"></i>
+                    </div>
+
+                    <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                </div>
+
+                <span class="testimonial-category">
+                    EVERYDAY WELLNESS
+                </span>
+
+                <p class="testimonial-text">
+                    A clear and simple shopping experience makes it easier
+                    to explore available healthcare products. Convenience
+                    and accessibility are important to me.
+                </p>
+
+                <div class="testimonial-divider"></div>
+
+                <div class="testimonial-author">
+                    <img
+                        src="Assets/IT21.webp"
+                        alt="Customer profile"
+                        loading="lazy"
+                    >
+
+                    <div class="author-details">
+                        <h3>Ananya R.</h3>
+                        <span>Wellness Shopper</span>
+                    </div>
+
+                    <span class="verified-icon" aria-label="Customer feedback">
+                        <i class="bi bi-patch-check-fill"></i>
+                    </span>
+                </div>
+            </article>
+
+        </div>
+
+        <div class="testimonials-bottom">
+            <div class="bottom-review-content">
+                <div class="bottom-review-icon">
+                    <i class="bi bi-chat-square-heart"></i>
+                </div>
+
+                <div class="bottom-review-text">
+                    <h3>Your experience matters to us.</h3>
+                    <p>
+                        Need assistance? Our team is ready to help you
+                        with your healthcare shopping questions.
+                    </p>
+                </div>
+            </div>
+
+            <a href="error.html" class="testimonials-button">
+                Contact Our Team
+                <i class="bi bi-arrow-up-right"></i>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
+<footer class="pharmacy-footer" id="footer">
+    <div class="footer-container">
+
+        <div class="footer-main">
+
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">
+                    <img
+                        src="Assets/blacklogo.webp"
+                        alt="Medicare Pharmacy Logo"
+                        class="footer-logo-image"
+                    >
+                </a>
+
+                <h3>Your Health, Our Priority.</h3>
+
+                <p class="footer-description">
+                    Discover healthcare essentials, personal care products,
+                    and everyday wellness solutions with Medicare.
+                    We're here to make your healthcare shopping simple
+                    and convenient.
+                </p>
+
+                <a href="error.html" class="footer-brand-link">
+                    Discover Our Store
+                    <i class="bi bi-arrow-up-right"></i>
+                </a>
+
+                <div class="footer-social">
+                    <h4>Follow Our Journey</h4>
+
+                    <div class="footer-social-links">
+                        <a href="error.html" aria-label="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+
+                        <a href="error.html" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+
+                        <a href="error.html" aria-label="LinkedIn">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+
+                        <a href="error.html" aria-label="YouTube">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-links-column">
+                <h3 class="footer-column-title">
+                    Quick Links
+                </h3>
+
+                <ul class="footer-links">
+                    <li>
+                        <a href="index.html">
+                            <i class="bi bi-chevron-right"></i>
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            <i class="bi bi-chevron-right"></i>
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="service.html">
+                            <i class="bi bi-chevron-right"></i>
+                            Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html">
+                            <i class="bi bi-chevron-right"></i>
+                            Shop
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="blog.html">
+                            <i class="bi bi-chevron-right"></i>
+                            Blog
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            <i class="bi bi-chevron-right"></i>
+                            Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-links-column">
+                <h3 class="footer-column-title">
+                    Customer Care
+                </h3>
+
+                <ul class="footer-links">
+                    <li>
+                        <a href="error.html">
+                            <i class="bi bi-chevron-right"></i>
+                            My Account
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="error.html">
+                            <i class="bi bi-chevron-right"></i>
+                            Track Order
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="error.html">
+                            <i class="bi bi-chevron-right"></i>
+                            Shipping Information
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="error.html">
+                            <i class="bi bi-chevron-right"></i>
+                            Returns & Refunds
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="error.html">
+                            <i class="bi bi-chevron-right"></i>
+                            FAQs
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="error.html">
+                            <i class="bi bi-chevron-right"></i>
+                            Privacy Policy
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-contact-column">
+                <h3 class="footer-column-title">
+                    Get In Touch
+                </h3>
+
+                <p class="footer-contact-description">
+                    Have questions about your shopping experience?
+                    We're here to help.
+                </p>
+
+                <a href="error.html" class="footer-contact-item">
+                    <span class="footer-contact-icon">
+                        <i class="bi bi-envelope"></i>
+                    </span>
+
+                    <span>
+                        <small>Email Us</small>
+                        <strong>support@medicare.com</strong>
+                    </span>
+                </a>
+
+                <a href="error.html" class="footer-contact-item">
+                    <span class="footer-contact-icon">
+                        <i class="bi bi-telephone"></i>
+                    </span>
+
+                    <span>
+                        <small>Call Us</small>
+                        <strong>+91 98765 43210</strong>
+                    </span>
+                </a>
+
+                <a href="error.html" class="footer-contact-item">
+                    <span class="footer-contact-icon">
+                        <i class="bi bi-geo-alt"></i>
+                    </span>
+
+                    <span>
+                        <small>Our Location</small>
+                        <strong>Visit Our Store</strong>
+                    </span>
+                </a>
+
+                <a href="error.html" class="footer-contact-button">
+                    Contact Support
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="footer-benefits">
+
+            <div class="footer-benefit">
+                <div class="footer-benefit-icon">
+                    <i class="bi bi-shield-check"></i>
+                </div>
+
+                <div>
+                    <h4>Quality You Can Trust</h4>
+                    <p>Thoughtfully sourced healthcare essentials.</p>
+                </div>
+            </div>
+
+            <div class="footer-benefit">
+                <div class="footer-benefit-icon">
+                    <i class="bi bi-truck"></i>
+                </div>
+
+                <div>
+                    <h4>Convenient Delivery</h4>
+                    <p>Healthcare shopping made convenient.</p>
+                </div>
+            </div>
+
+            <div class="footer-benefit">
+                <div class="footer-benefit-icon">
+                    <i class="bi bi-lock"></i>
+                </div>
+
+                <div>
+                    <h4>Secure Shopping</h4>
+                    <p>A secure and reliable shopping experience.</p>
+                </div>
+            </div>
+
+            <div class="footer-benefit">
+                <div class="footer-benefit-icon">
+                    <i class="bi bi-headset"></i>
+                </div>
+
+                <div>
+                    <h4>Customer Assistance</h4>
+                    <p>Support for your shopping questions.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p class="footer-copyright">
+                &copy; <span id="footerYear"></span> Medicare.
+                All rights reserved.
+            </p>
+
+            <div class="footer-legal-links">
+                <a href="error.html">Privacy Policy</a>
+                <span></span>
+                <a href="error.html">Terms & Conditions</a>
+                <span></span>
+                <a href="error.html">Cookie Policy</a>
+            </div>
+
+          
+
+        </div>
+
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"></script>
+<script src="navbar.js"></script>
+<script src="about.js"></script>
+</body>
+</html>

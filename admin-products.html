@@ -1,0 +1,300 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#173c32">
+    <title>Manage Products | MediCare Admin</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="admin-manage-products.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar" id="sidebar" aria-label="Admin navigation">
+        <a href="admin-dashboard.html" class="brand">
+            <img src="Assets/blacklogo.webp" alt="MediCare Logo" class="sidebar-logo">
+        </a>
+
+        <p class="sidebar-heading">MAIN MENU</p>
+
+        <nav class="sidebar-nav">
+            <a href="admin-dashboard.html" class="nav-link">
+                <i class="bi bi-grid-1x2"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="admin-orders.html" class="nav-link">
+                <i class="bi bi-cart3"></i>
+                <span>Manage Orders</span>
+            </a>
+
+            <a href="admin-products.html" class="nav-link active">
+                <i class="bi bi-box-seam"></i>
+                <span>Manage Products</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="admin-profile">
+                <div class="avatar">AD</div>
+                <div class="admin-details">
+                    <strong>Administrator</strong>
+                    <span>Store Manager</span>
+                </div>
+            </div>
+
+            <a href="login.html" class="logout-link">
+                <i class="bi bi-box-arrow-left"></i>
+                <span>Logout</span>
+            </a>
+        </div>
+    </aside>
+
+    <button class="sidebar-overlay" id="sidebarOverlay" aria-label="Close navigation" tabindex="-1"></button>
+
+    <header class="topbar">
+        <div class="topbar-left">
+            <button class="menu-toggle" id="menuToggle" type="button"
+                    aria-label="Open navigation" aria-expanded="false"
+                    aria-controls="sidebar">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <div class="topbar-title">
+                <span>Admin / Inventory</span>
+                <h1>Manage Products</h1>
+            </div>
+        </div>
+
+        <div class="topbar-right">
+            <div class="date-display">
+                <i class="bi bi-calendar3"></i>
+                <span id="currentDate"></span>
+            </div>
+            <a href="admin-dashboard.html">
+
+            <img src="Assets/blacklogo.webp" alt="MediCare Logo" class="mobile-logo">
+            </a>
+        </div>
+    </header>
+
+    <main class="main-content" id="mainContent">
+        <div class="content-container">
+
+            <section class="welcome-section">
+                <div class="welcome-text">
+                    <span class="eyebrow">PRODUCT MANAGEMENT</span>
+                    <h2>Manage your pharmacy inventory</h2>
+                    <p>Add, update and monitor your pharmacy products.</p>
+                </div>
+
+                <button class="primary-btn" id="addProductBtn" type="button">
+                    <i class="bi bi-plus-lg"></i>
+                    Add New Product
+                </button>
+            </section>
+
+            <section class="stats-grid">
+                <article class="stat-card">
+                    <div class="stat-icon green"><i class="bi bi-box-seam"></i></div>
+                    <div class="stat-info">
+                        <p>Total Products</p>
+                        <h3 id="totalProducts">0</h3>
+                        <span>Products in inventory</span>
+                    </div>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-icon blue"><i class="bi bi-check-circle"></i></div>
+                    <div class="stat-info">
+                        <p>In Stock</p>
+                        <h3 id="inStockProducts">0</h3>
+                        <span>Available products</span>
+                    </div>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-icon orange"><i class="bi bi-exclamation-triangle"></i></div>
+                    <div class="stat-info">
+                        <p>Low Stock</p>
+                        <h3 id="lowStockProducts">0</h3>
+                        <span>Needs restocking</span>
+                    </div>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-icon red"><i class="bi bi-x-circle"></i></div>
+                    <div class="stat-info">
+                        <p>Out of Stock</p>
+                        <h3 id="outStockProducts">0</h3>
+                        <span>Currently unavailable</span>
+                    </div>
+                </article>
+            </section>
+
+            <section class="inventory-section">
+                <div class="inventory-header">
+                    <div>
+                        <h2>Product Inventory</h2>
+                        <p>View and manage your pharmacy products.</p>
+                    </div>
+
+                    <button class="secondary-btn" id="exportBtn" type="button">
+                        <i class="bi bi-download"></i>
+                        Export CSV
+                    </button>
+                </div>
+
+                <div class="filter-toolbar">
+                    <label class="search-box">
+                        <i class="bi bi-search"></i>
+                        <input type="search" id="searchInput"
+                               placeholder="Search product name or SKU..."
+                               aria-label="Search products">
+                    </label>
+
+                    <select id="categoryFilter" aria-label="Filter by category">
+                        <option value="all">All Categories</option>
+                        <option value="Medicines">Medicines</option>
+                        <option value="Vitamins">Vitamins</option>
+                        <option value="Personal Care">Personal Care</option>
+                        <option value="Medical Devices">Medical Devices</option>
+                        <option value="First Aid">First Aid</option>
+                    </select>
+
+                    <select id="stockFilter" aria-label="Filter by stock status">
+                        <option value="all">All Stock Status</option>
+                        <option value="In Stock">In Stock</option>
+                        <option value="Low Stock">Low Stock</option>
+                        <option value="Out of Stock">Out of Stock</option>
+                    </select>
+
+                    <button class="reset-btn" id="resetFiltersBtn" type="button">
+                        <i class="bi bi-arrow-counterclockwise"></i>
+                        Reset
+                    </button>
+                </div>
+
+                <div class="table-wrapper" id="tableWrapper">
+                    <table class="products-table">
+                        <thead>
+                            <tr>
+                                <th>PRODUCT</th>
+                                <th>SKU</th>
+                                <th>CATEGORY</th>
+                                <th>PRICE</th>
+                                <th>STOCK</th>
+                                <th>STATUS</th>
+                                <th>ACTIONS</th>
+                            </tr>
+                        </thead>
+                        <tbody id="productsTableBody"></tbody>
+                    </table>
+                </div>
+
+                <div class="mobile-products" id="mobileProducts"></div>
+
+                <div class="empty-state" id="emptyState" hidden>
+                    <i class="bi bi-box-seam"></i>
+                    <h3>No products found</h3>
+                    <p>Try another search or add a new product.</p>
+                    <button class="primary-btn" id="emptyAddBtn" type="button">
+                        <i class="bi bi-plus-lg"></i>
+                        Add Product
+                    </button>
+                </div>
+
+                <div class="inventory-footer">
+                    <p id="resultsText">Showing 0 products</p>
+                    <div class="pagination" id="pagination"></div>
+                </div>
+            </section>
+
+            <footer class="page-footer">
+                <span>© <span id="currentYear"></span> MediCare Pharmacy. All rights reserved.</span>
+                <span>Inventory Management</span>
+            </footer>
+        </div>
+    </main>
+</div>
+
+<div class="modal-backdrop" id="productModal" aria-hidden="true">
+    <section class="product-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-header">
+            <div>
+                <span class="eyebrow">INVENTORY MANAGEMENT</span>
+                <h2 id="modalTitle">Add New Product</h2>
+            </div>
+            <button class="modal-close" id="closeModalBtn" type="button" aria-label="Close">
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
+
+        <form id="productForm" novalidate>
+            <input type="hidden" id="productId">
+
+            <div class="form-grid">
+                <div class="form-group full-width">
+                    <label for="productName">Product Name *</label>
+                    <input id="productName" maxlength="100" required>
+                    <small class="field-error" id="productNameError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="productSku">SKU *</label>
+                    <input id="productSku" maxlength="30" required>
+                    <small class="field-error" id="productSkuError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="productCategory">Category *</label>
+                    <select id="productCategory" required>
+                        <option value="">Select category</option>
+                        <option value="Medicines">Medicines</option>
+                        <option value="Vitamins">Vitamins</option>
+                        <option value="Personal Care">Personal Care</option>
+                        <option value="Medical Devices">Medical Devices</option>
+                        <option value="First Aid">First Aid</option>
+                    </select>
+                    <small class="field-error" id="productCategoryError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="productPrice">Price (₹) *</label>
+                    <input type="number" id="productPrice" min="0.01" max="10000000" step="0.01" required>
+                    <small class="field-error" id="productPriceError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="productStock">Stock Quantity *</label>
+                    <input type="number" id="productStock" min="0" max="1000000" step="1" required>
+                    <small class="field-error" id="productStockError"></small>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="productImage">Product Image URL</label>
+                    <input type="url" id="productImage" placeholder="https://example.com/product.webp">
+                    <small class="field-error" id="productImageError"></small>
+                </div>
+            </div>
+
+            <div class="modal-actions">
+                <button class="cancel-btn" id="cancelModalBtn" type="button">Cancel</button>
+                <button class="primary-btn" type="submit">
+                    <i class="bi bi-check2"></i>
+                    Save Product
+                </button>
+            </div>
+        </form>
+    </section>
+</div>
+
+<div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+<script src="admin-manage-products.js"></script>
+</body>
+</html>

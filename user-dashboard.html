@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#16865b">
+    <title>MediCare | User Dashboard</title>
+    <link rel="icon" href="assets/images/logo.webp">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="user-dashboard.css">
+</head>
+<body>
+
+<div class="dashboard-shell">
+
+    <aside class="dashboard-sidebar" id="dashboardSidebar" aria-label="Dashboard navigation">
+        <a href="user-dashboard.html" class="sidebar-brand">
+            <img src="Assets/blacklogo.webp" alt="MediCare">
+        </a>
+
+        <div class="sidebar-profile">
+            <div class="profile-avatar">
+                <i class="bi bi-person-fill"></i>
+            </div>
+            <div class="profile-info">
+                <strong id="sidebarUserName">User</strong>
+                <span>Pharmacy Customer</span>
+            </div>
+        </div>
+
+        <div class="sidebar-title">MY PHARMACY</div>
+
+        <nav class="sidebar-nav">
+            <a href="user-dashboard.html" class="sidebar-link active">
+                <i class="bi bi-grid-1x2-fill"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="my-order.html" class="sidebar-link">
+                <i class="bi bi-bag-check"></i>
+                <span>My Orders</span>
+            </a>
+
+            <a href="my-wishlist.html" class="sidebar-link">
+                <i class="bi bi-heart"></i>
+                <span>My Wishlist</span>
+            </a>
+
+           
+        </nav>
+
+        <div class="sidebar-support">
+            <div class="support-icon">
+                <i class="bi bi-headset"></i>
+            </div>
+            <strong>Need assistance?</strong>
+            <p>Our pharmacy team is here to help.</p>
+            <a href="error.html">Contact Support <i class="bi bi-arrow-up-right"></i></a>
+        </div>
+
+        <div class="sidebar-bottom">
+            <button type="button" class="logout-link" id="logoutButton">
+                <i class="bi bi-box-arrow-left"></i>
+                <span>Logout</span>
+            </button>
+        </div>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <main class="dashboard-main">
+
+        <header class="dashboard-header">
+            <div class="header-left">
+                <button
+                    type="button"
+                    class="mobile-menu"
+                    id="mobileMenuButton"
+                    aria-label="Open menu"
+                    aria-controls="dashboardSidebar"
+                    aria-expanded="false"
+                >
+                    <i class="bi bi-list"></i>
+                </button>
+
+                <a href="user-dashboard.html" class="mobile-logo">
+                    <img src="Assets/blacklogo.webp" alt="MediCare">
+                </a>
+
+                <div class="header-heading">
+                    <span>YOUR HEALTH SPACE</span>
+                    <h1>MY DASHBOARD</h1>
+                </div>
+            </div>
+
+            <div class="header-right">
+                <a href="error.html" class="header-icon" aria-label="Search">
+                    <i class="bi bi-search"></i>
+                </a>
+
+                <a href="error.html" class="header-icon notification" aria-label="Notifications">
+                    <i class="bi bi-bell"></i>
+                    <span></span>
+                </a>
+
+                <a href="error.html" class="header-user">
+                    <div class="header-avatar">
+                        <i class="bi bi-person-fill"></i>
+                    </div>
+                    <div class="header-user-info">
+                        <strong id="headerUserName">User</strong>
+                        <span>Customer Account</span>
+                    </div>
+                    <i class="bi bi-chevron-down"></i>
+                </a>
+            </div>
+        </header>
+
+        <div class="dashboard-content">
+
+            <section class="welcome-card">
+                <div class="welcome-content">
+                    <span class="welcome-date" id="currentDate"></span>
+
+                    <div class="welcome-status">
+                        <span></span>
+                        YOUR HEALTH, OUR PRIORITY
+                    </div>
+
+                    <h2>
+                        WELCOME BACK,
+                        <strong id="welcomeUser">USER</strong>
+                    </h2>
+
+                    <p>
+                        Take care of yourself with trusted medicines, everyday wellness
+                        essentials, and convenient pharmacy services.
+                    </p>
+
+                    <div class="welcome-actions">
+                        <a href="error.html" class="primary-btn">
+                            SHOP MEDICINES
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+
+                        <a href="error.html" class="secondary-btn">
+                            VIEW MY ORDERS
+                            <i class="bi bi-bag-check"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="welcome-visual" aria-hidden="true">
+                    <div class="medical-orbit orbit-one"></div>
+                    <div class="medical-orbit orbit-two"></div>
+                    <div class="medical-orbit orbit-three"></div>
+                    <div class="orbit-dot dot-one"></div>
+                    <div class="orbit-dot dot-two"></div>
+                    <div class="orbit-dot dot-three"></div>
+                    <div class="orbit-dot dot-four"></div>
+
+                    <div class="medical-core">
+                        <i class="bi bi-heart-pulse-fill"></i>
+                        <span>HEALTH</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="quick-grid">
+                <a href="error.html" class="quick-card">
+                    <div class="quick-card-top">
+                        <div class="quick-icon green">
+                            <i class="bi bi-capsule"></i>
+                        </div>
+                        <i class="bi bi-arrow-up-right quick-arrow"></i>
+                    </div>
+                    <strong>Shop Medicines</strong>
+                    <p>Explore healthcare essentials.</p>
+                </a>
+
+                <a href="error.html" class="quick-card">
+                    <div class="quick-card-top">
+                        <div class="quick-icon blue">
+                            <i class="bi bi-bag-check"></i>
+                        </div>
+                        <i class="bi bi-arrow-up-right quick-arrow"></i>
+                    </div>
+                    <strong>My Orders</strong>
+                    <p>View your order information.</p>
+                </a>
+
+                <a href="error.html" class="quick-card">
+                    <div class="quick-card-top">
+                        <div class="quick-icon orange">
+                            <i class="bi bi-prescription2"></i>
+                        </div>
+                        <i class="bi bi-arrow-up-right quick-arrow"></i>
+                    </div>
+                    <strong>Prescriptions</strong>
+                    <p>Access prescription services.</p>
+                </a>
+
+                <a href="error.html" class="quick-card">
+                    <div class="quick-card-top">
+                        <div class="quick-icon purple">
+                            <i class="bi bi-heart"></i>
+                        </div>
+                        <i class="bi bi-arrow-up-right quick-arrow"></i>
+                    </div>
+                    <strong>My Wishlist</strong>
+                    <p>Keep track of saved products.</p>
+                </a>
+            </section>
+
+            <section class="dashboard-grid">
+
+                <article class="dashboard-card categories-card">
+                    <div class="card-header">
+                        <div>
+                            <span>EXPLORE PRODUCTS</span>
+                            <h3>SHOP BY CATEGORY</h3>
+                        </div>
+                        <a href="error.html">VIEW ALL <i class="bi bi-arrow-right"></i></a>
+                    </div>
+
+                    <div class="category-grid">
+                        <a href="error.html" class="category-item">
+                            <div class="category-icon">
+                                <i class="bi bi-capsule"></i>
+                            </div>
+                            <strong>Medicines</strong>
+                            <span>Everyday essentials</span>
+                        </a>
+
+                        <a href="error.html" class="category-item">
+                            <div class="category-icon">
+                                <i class="bi bi-heart-pulse"></i>
+                            </div>
+                            <strong>Healthcare</strong>
+                            <span>Care for your health</span>
+                        </a>
+
+                        <a href="error.html" class="category-item">
+                            <div class="category-icon">
+                                <i class="bi bi-bandaid"></i>
+                            </div>
+                            <strong>First Aid</strong>
+                            <span>Be prepared</span>
+                        </a>
+
+                        <a href="error.html" class="category-item">
+                            <div class="category-icon">
+                                <i class="bi bi-activity"></i>
+                            </div>
+                            <strong>Wellness</strong>
+                            <span>Everyday wellbeing</span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="dashboard-card health-card">
+                    <div class="card-header">
+                        <div>
+                            <span>YOUR WELLBEING</span>
+                            <h3>HEALTH REMINDERS</h3>
+                        </div>
+                        <div class="card-header-icon">
+                            <i class="bi bi-bell"></i>
+                        </div>
+                    </div>
+
+                    <div class="reminder-item">
+                        <div class="reminder-icon">
+                            <i class="bi bi-calendar-check"></i>
+                        </div>
+                        <div class="reminder-text">
+                            <strong>Keep track of your health</strong>
+                            <p>Follow the schedule recommended by your healthcare professional.</p>
+                        </div>
+                    </div>
+
+                    <div class="reminder-item">
+                        <div class="reminder-icon">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <div class="reminder-text">
+                            <strong>Use medicines responsibly</strong>
+                            <p>Always follow the instructions provided by your doctor or pharmacist.</p>
+                        </div>
+                    </div>
+
+                    <a href="error.html" class="health-link">
+                        MANAGE REMINDERS
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </article>
+
+            </section>
+
+            <section class="dashboard-grid lower-grid">
+
+                <article class="dashboard-card order-card">
+                    <div class="card-header">
+                        <div>
+                            <span>ORDER ACTIVITY</span>
+                            <h3>RECENT ORDERS</h3>
+                        </div>
+                        <a href="error.html">VIEW ALL <i class="bi bi-arrow-right"></i></a>
+                    </div>
+
+                    <div class="empty-state">
+                        <div class="empty-icon">
+                            <i class="bi bi-bag"></i>
+                        </div>
+                        <h4>Your order activity will appear here</h4>
+                        <p>Start exploring our pharmacy products to find the essentials you need.</p>
+                        <a href="error.html" class="empty-state-btn">EXPLORE PRODUCTS</a>
+                    </div>
+                </article>
+
+                <article class="dashboard-card service-card">
+                    <div class="service-card-top">
+                        <div class="service-icon">
+                            <i class="bi bi-headset"></i>
+                        </div>
+                        <span>WE ARE HERE FOR YOU</span>
+                    </div>
+
+                    <h3>Need help with your healthcare needs?</h3>
+                    <p>Reach out to our team for assistance with pharmacy services and general enquiries.</p>
+
+                    <a href="error.html" class="service-btn">
+                        CONTACT OUR TEAM
+                        <i class="bi bi-arrow-up-right"></i>
+                    </a>
+                </article>
+
+            </section>
+
+            <section class="health-tip">
+                <div class="tip-icon">
+                    <i class="bi bi-lightbulb"></i>
+                </div>
+                <div class="tip-content">
+                    <span>HEALTHY LIVING TIP</span>
+                    <strong>Store medicines according to their labels and keep them out of children's reach.</strong>
+                </div>
+                <a href="error.html">
+                    LEARN MORE
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+            </section>
+
+            <footer class="dashboard-footer">
+                <span>&copy; <span id="currentYear"></span> MediCare Pharmacy</span>
+                <span>YOUR HEALTH. OUR COMMITMENT.</span>
+            </footer>
+
+        </div>
+    </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<script src="user-dashboard.js"></script>
+
+</body>
+</html>

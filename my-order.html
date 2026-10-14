@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#16865b">
+    <title>MediCare | My Orders</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="my-order.css">
+</head>
+<body>
+
+<div class="dashboard-shell">
+
+    <aside class="dashboard-sidebar" id="dashboardSidebar">
+        <a href="user-dashboard.html" class="sidebar-brand">
+            <img src="Assets/blacklogo.webp" alt="MediCare">
+        </a>
+
+        <div class="sidebar-profile">
+            <div class="profile-avatar">
+                <i class="bi bi-person-fill"></i>
+            </div>
+            <div class="profile-info">
+                <strong id="sidebarUserName">Customer</strong>
+                <span>Pharmacy Customer</span>
+            </div>
+        </div>
+
+        <div class="sidebar-title">MY PHARMACY</div>
+
+        <nav class="sidebar-nav">
+            <a href="user-dashboard.html" class="sidebar-link">
+                <i class="bi bi-grid-1x2-fill"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="my-order.html" class="sidebar-link active" aria-current="page">
+                <i class="bi bi-bag-check"></i>
+                <span>My Orders</span>
+            </a>
+
+            <a href="my-wishlist.html" class="sidebar-link">
+                <i class="bi bi-heart"></i>
+                <span>My Wishlist</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <button type="button" class="logout-link" id="logoutButton">
+                <i class="bi bi-box-arrow-left"></i>
+                <span>Logout</span>
+            </button>
+        </div>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <main class="dashboard-main">
+
+        <header class="dashboard-header">
+            <div class="header-left">
+                <button type="button" class="mobile-menu" id="mobileMenuButton" aria-label="Open menu" aria-controls="dashboardSidebar" aria-expanded="false">
+                    <i class="bi bi-list"></i>
+                </button>
+
+                <a href="user-dashboard.html" class="mobile-logo">
+                    <img src="Assets/blacklogo.webp" alt="MediCare">
+                </a>
+
+                <div class="desktop-page-title">
+                    <span>YOUR PHARMACY ACCOUNT</span>
+                    <h1>MY ORDERS</h1>
+                </div>
+            </div>
+
+            <div class="header-right">
+                <a href="user-dashboard.html" class="header-home">
+                    <i class="bi bi-house"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <div class="header-user">
+                    <div class="header-avatar">
+                        <i class="bi bi-person-fill"></i>
+                    </div>
+                    <div class="header-user-info">
+                        <strong id="headerUserName">Customer</strong>
+                        <span>Pharmacy Customer</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="dashboard-content">
+
+            <section class="page-heading">
+                <div>
+                    <span class="eyebrow">ORDER MANAGEMENT</span>
+                    <h2>My Orders</h2>
+                    <p>Track your medicines and review your recent purchases.</p>
+                </div>
+
+                <a href="error.html" class="support-button">
+                    <i class="bi bi-headset"></i>
+                    Order Support
+                </a>
+            </section>
+
+            <section class="order-summary">
+                <article class="summary-card">
+                    <div class="summary-icon">
+                        <i class="bi bi-bag-check"></i>
+                    </div>
+                    <div>
+                        <span>Total Orders</span>
+                        <strong id="totalOrders">4</strong>
+                        <p>All your purchases</p>
+                    </div>
+                </article>
+
+                <article class="summary-card">
+                    <div class="summary-icon pending">
+                        <i class="bi bi-clock-history"></i>
+                    </div>
+                    <div>
+                        <span>Processing</span>
+                        <strong id="processingOrders">1</strong>
+                        <p>Being prepared</p>
+                    </div>
+                </article>
+
+                <article class="summary-card">
+                    <div class="summary-icon delivered">
+                        <i class="bi bi-check-circle"></i>
+                    </div>
+                    <div>
+                        <span>Delivered</span>
+                        <strong id="deliveredOrders">2</strong>
+                        <p>Successfully delivered</p>
+                    </div>
+                </article>
+            </section>
+
+            <section class="orders-section">
+                <div class="section-header">
+                    <div>
+                        <span class="eyebrow">YOUR PURCHASES</span>
+                        <h3>Recent Orders</h3>
+                    </div>
+
+                    <div class="order-filters">
+                        <label class="search-box">
+                            <i class="bi bi-search"></i>
+                            <input type="search" id="orderSearch" placeholder="Search orders..." aria-label="Search orders">
+                        </label>
+
+                        <label class="filter-box">
+                            <i class="bi bi-funnel"></i>
+                            <select id="statusFilter" aria-label="Filter by order status">
+                                <option value="all">All Orders</option>
+                                <option value="processing">Processing</option>
+                                <option value="shipped">Shipped</option>
+                                <option value="delivered">Delivered</option>
+                                <option value="cancelled">Cancelled</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="orders-grid" id="ordersGrid">
+
+                    <article class="order-card" data-status="delivered" data-search="med1001 paracetamol vitamin c">
+                        <div class="order-card-header">
+                            <div class="order-reference">
+                                <span class="order-icon">
+                                    <i class="bi bi-capsule"></i>
+                                </span>
+                                <div>
+                                    <span class="order-label">ORDER ID</span>
+                                    <h4>MED1001</h4>
+                                </div>
+                            </div>
+                            <span class="status-badge delivered">
+                                <i class="bi bi-check-circle-fill"></i>
+                                Delivered
+                            </span>
+                        </div>
+
+                        <div class="order-date">
+                            <i class="bi bi-calendar3"></i>
+                            October 10, 2026
+                        </div>
+
+                        <div class="product-preview">
+                            <div class="product-icon">
+                                <i class="bi bi-capsule-pill"></i>
+                            </div>
+                            <div class="product-info">
+                                <h5>Paracetamol 500mg</h5>
+                                <p>Vitamin C Tablets + 1 more item</p>
+                            </div>
+                        </div>
+
+                        <div class="order-card-footer">
+                            <div>
+                                <span class="total-label">Order Total</span>
+                                <strong>₹249.00</strong>
+                            </div>
+                            <button type="button" class="view-order-button" data-order-id="MED1001">
+                                View Details
+                                <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="order-card" data-status="processing" data-search="med1002 digital thermometer">
+                        <div class="order-card-header">
+                            <div class="order-reference">
+                                <span class="order-icon">
+                                    <i class="bi bi-thermometer-half"></i>
+                                </span>
+                                <div>
+                                    <span class="order-label">ORDER ID</span>
+                                    <h4>MED1002</h4>
+                                </div>
+                            </div>
+                            <span class="status-badge processing">
+                                <i class="bi bi-clock-fill"></i>
+                                Processing
+                            </span>
+                        </div>
+
+                        <div class="order-date">
+                            <i class="bi bi-calendar3"></i>
+                            October 12, 2026
+                        </div>
+
+                        <div class="product-preview">
+                            <div class="product-icon">
+                                <i class="bi bi-thermometer-half"></i>
+                            </div>
+                            <div class="product-info">
+                                <h5>Digital Thermometer</h5>
+                                <p>Quantity: 1 item</p>
+                            </div>
+                        </div>
+
+                        <div class="order-card-footer">
+                            <div>
+                                <span class="total-label">Order Total</span>
+                                <strong>₹399.00</strong>
+                            </div>
+                            <button type="button" class="view-order-button" data-order-id="MED1002">
+                                View Details
+                                <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="order-card" data-status="shipped" data-search="med1003 hand sanitizer face masks">
+                        <div class="order-card-header">
+                            <div class="order-reference">
+                                <span class="order-icon">
+                                    <i class="bi bi-shield-plus"></i>
+                                </span>
+                                <div>
+                                    <span class="order-label">ORDER ID</span>
+                                    <h4>MED1003</h4>
+                                </div>
+                            </div>
+                            <span class="status-badge shipped">
+                                <i class="bi bi-truck"></i>
+                                Shipped
+                            </span>
+                        </div>
+
+                        <div class="order-date">
+                            <i class="bi bi-calendar3"></i>
+                            October 11, 2026
+                        </div>
+
+                        <div class="product-preview">
+                            <div class="product-icon">
+                                <i class="bi bi-shield-plus"></i>
+                            </div>
+                            <div class="product-info">
+                                <h5>Hand Sanitizer</h5>
+                                <p>Face Masks + 1 more item</p>
+                            </div>
+                        </div>
+
+                        <div class="order-card-footer">
+                            <div>
+                                <span class="total-label">Order Total</span>
+                                <strong>₹320.00</strong>
+                            </div>
+                            <button type="button" class="view-order-button" data-order-id="MED1003">
+                                View Details
+                                <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="order-card" data-status="delivered" data-search="med1004 first aid kit">
+                        <div class="order-card-header">
+                            <div class="order-reference">
+                                <span class="order-icon">
+                                    <i class="bi bi-bandaid"></i>
+                                </span>
+                                <div>
+                                    <span class="order-label">ORDER ID</span>
+                                    <h4>MED1004</h4>
+                                </div>
+                            </div>
+                            <span class="status-badge delivered">
+                                <i class="bi bi-check-circle-fill"></i>
+                                Delivered
+                            </span>
+                        </div>
+
+                        <div class="order-date">
+                            <i class="bi bi-calendar3"></i>
+                            October 8, 2026
+                        </div>
+
+                        <div class="product-preview">
+                            <div class="product-icon">
+                                <i class="bi bi-bandaid"></i>
+                            </div>
+                            <div class="product-info">
+                                <h5>First Aid Kit</h5>
+                                <p>Quantity: 1 item</p>
+                            </div>
+                        </div>
+
+                        <div class="order-card-footer">
+                            <div>
+                                <span class="total-label">Order Total</span>
+                                <strong>₹549.00</strong>
+                            </div>
+                            <button type="button" class="view-order-button" data-order-id="MED1004">
+                                View Details
+                                <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                </div>
+
+                <div class="no-orders" id="noOrders">
+                    <div class="empty-icon">
+                        <i class="bi bi-bag"></i>
+                    </div>
+                    <h3>No orders found</h3>
+                    <p>Try changing your search or filter to find an order.</p>
+                    <button type="button" id="resetFilters">Clear Filters</button>
+                </div>
+
+                <div class="orders-bottom">
+                    <span id="ordersCount">Showing 4 orders</span>
+                    <a href="error.html" class="view-all-link">
+                        View All Orders
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </section>
+
+            <section class="order-help">
+                <div class="help-icon">
+                    <i class="bi bi-headset"></i>
+                </div>
+                <div class="help-content">
+                    <h3>Need help with an order?</h3>
+                    <p>Our support team is here to help with your pharmacy purchases.</p>
+                </div>
+                <a href="contact.html" class="contact-button">
+                    Contact Us
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+            </section>
+
+            <footer class="dashboard-footer">
+                <span>© <span id="currentYear"></span> MediCare Pharmacy</span>
+                <span>YOUR HEALTH. OUR COMMITMENT.</span>
+            </footer>
+
+        </div>
+    </main>
+</div>
+
+<script src="my-order.js"></script>
+</body>
+</html>

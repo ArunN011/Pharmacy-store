@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5faf7">
+    <title>Login | MediCare - Stackly</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <main class="login-page">
+        <a href="index.html" class="back-home">
+            <i class="bi bi-arrow-left"></i>
+            <span>Back to Home</span>
+        </a>
+
+        <div class="login-decoration login-decoration-one"></div>
+        <div class="login-decoration login-decoration-two"></div>
+
+        <div class="login-layout">
+            <section class="login-showcase">
+               <a href="index.html" class="login-brand">
+    <img src="Assets/blacklogo.webp" alt="Stackly Logo" class="login-logo">
+</a>
+
+                <div class="showcase-content">
+                    <span class="showcase-badge">
+                        <i class="bi bi-shield-check"></i>
+                        YOUR HEALTH, OUR PRIORITY
+                    </span>
+
+                    <h1>Better Health<br>Starts <span>With Care.</span></h1>
+
+                    <p>
+                        Access your pharmacy account, manage your medicines,
+                        and discover healthcare essentials in one convenient place.
+                    </p>
+
+                    <div class="showcase-features">
+                        <div class="showcase-feature">
+                            <span class="feature-icon"><i class="bi bi-capsule"></i></span>
+                            <div>
+                                <strong>Healthcare Essentials</strong>
+                                <span>Explore pharmacy products</span>
+                            </div>
+                        </div>
+
+                        <div class="showcase-feature">
+                            <span class="feature-icon"><i class="bi bi-person-check"></i></span>
+                            <div>
+                                <strong>Personalized Access</strong>
+                                <span>Experience your own dashboard</span>
+                            </div>
+                        </div>
+
+                        <div class="showcase-feature">
+                            <span class="feature-icon"><i class="bi bi-shield-lock"></i></span>
+                            <div>
+                                <strong>Account Protection</strong>
+                                <span>Access based on your selected role</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="showcase-footer">
+                    <i class="bi bi-geo-alt"></i>
+                    Stackly · Salem, Tamil Nadu, India
+                </div>
+            </section>
+
+            <section class="login-form-section">
+                <div class="login-card">
+                    <div class="mobile-brand">
+                        <a href="index.html" class="login-brand">
+                            <span class="brand-icon"><i class="bi bi-heart-pulse-fill"></i></span>
+                            <span>Medi<span>Care</span></span>
+                        </a>
+                    </div>
+
+                    <div class="login-heading">
+                        <span class="form-eyebrow">WELCOME BACK</span>
+                        <h2>Sign in to your account</h2>
+                        <p>Choose your account type to continue.</p>
+                    </div>
+
+                    <form id="loginForm" novalidate>
+                        <div class="role-selector">
+                            <button
+                                type="button"
+                                class="role-option active"
+                                data-role="user"
+                                aria-pressed="true">
+                                <span class="role-icon"><i class="bi bi-person-fill"></i></span>
+                                <span class="role-text">
+                                    <strong>User</strong>
+                                    <small>Access your account</small>
+                                </span>
+                                <i class="bi bi-check-circle-fill role-check"></i>
+                            </button>
+
+                            <button
+                                type="button"
+                                class="role-option"
+                                data-role="admin"
+                                aria-pressed="false">
+                                <span class="role-icon"><i class="bi bi-shield-lock-fill"></i></span>
+                                <span class="role-text">
+                                    <strong>Admin</strong>
+                                    <small>Manage the pharmacy</small>
+                                </span>
+                                <i class="bi bi-check-circle-fill role-check"></i>
+                            </button>
+                        </div>
+
+                        <div class="selected-role-message" id="selectedRoleMessage" aria-live="polite">
+                            <i class="bi bi-info-circle"></i>
+                            <span>User login selected</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="loginEmail">Email Address</label>
+
+                            <div class="input-wrapper">
+                                <i class="bi bi-envelope input-icon"></i>
+                                <input
+                                    type="email"
+                                    id="loginEmail"
+                                    name="email"
+                                    placeholder="Enter your email"
+                                    autocomplete="username"
+                                    maxlength="254"
+                                    required>
+                            </div>
+
+                            <small class="field-error"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="loginPassword">Password</label>
+
+                            <div class="input-wrapper">
+                                <i class="bi bi-lock input-icon"></i>
+                                <input
+                                    type="password"
+                                    id="loginPassword"
+                                    name="password"
+                                    placeholder="Enter your password"
+                                    autocomplete="current-password"
+                                    required>
+
+                                <button
+                                    type="button"
+                                    class="password-toggle"
+                                    id="passwordToggle"
+                                    aria-label="Show password"
+                                    aria-pressed="false">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+                            </div>
+
+                            <small class="field-error"></small>
+                        </div>
+
+                        <div class="form-options">
+                            <label class="remember-option">
+                                <input type="checkbox" id="rememberMe">
+                                <span class="custom-checkbox">
+                                    <i class="bi bi-check"></i>
+                                </span>
+                                <span>Remember Me</span>
+                            </label>
+
+                            <a href="error.html" class="forgot-password">Forgot Password?</a>
+                        </div>
+
+                        <div class="login-error-message" id="loginErrorMessage" role="alert"></div>
+
+                        <button type="submit" class="login-submit-btn" id="loginSubmit">
+                            <span>Sign In</span>
+                            <i class="bi bi-arrow-up-right"></i>
+                        </button>
+
+                        <div class="register-link">
+                            <span>Don't have an account?</span>
+                            <a href="register.html">Create Account</a>
+                        </div>
+
+                        <div class="login-security">
+                            <i class="bi bi-shield-check"></i>
+                            <p>Your account information is handled with care.</p>
+                        </div>
+                    </form>
+                </div>
+
+                <p class="login-copyright">
+                    &copy; <span id="currentYear"></span> Stackly. All rights reserved.
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#173C32">
+    <title>404 - Page Not Found | MediCare</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="error.css">
+</head>
+<body>
+
+    <main class="error-page">
+        <div class="error-card">
+
+            <a href="index.html" class="brand">
+                <img src="Assets/blacklogo.webp" alt="MediCare Logo">
+            </a>
+
+            <div class="error-illustration">
+                <div class="error-circle">
+                    <span class="error-number">404</span>
+                </div>
+                <div class="floating-icon icon-one">
+                    <i class="bi bi-capsule"></i>
+                </div>
+                <div class="floating-icon icon-two">
+                    <i class="bi bi-heart-pulse"></i>
+                </div>
+                <div class="floating-icon icon-three">
+                    <i class="bi bi-search"></i>
+                </div>
+            </div>
+
+            <span class="error-label">ERROR 404</span>
+
+            <h1>Oops! Page not found</h1>
+
+            <p class="error-description">
+                The page you're looking for may have been moved,
+                removed, or is temporarily unavailable.
+            </p>
+
+            <div class="error-actions">
+                <button class="primary-btn" id="goBackBtn" type="button">
+                    <i class="bi bi-arrow-left"></i>
+                    Go Back
+                </button>
+
+                <a href="index.html" class="secondary-btn">
+                    <i class="bi bi-house-door"></i>
+                    Back to Home
+                </a>
+            </div>
+
+            <div class="help-text">
+                <i class="bi bi-shield-check"></i>
+                <span>We're here to help you stay healthy.</span>
+            </div>
+
+        </div>
+
+        <footer class="error-footer">
+            <span>© <span id="currentYear"></span> MediCare Pharmacy</span>
+            <span>Care you can trust.</span>
+        </footer>
+    </main>
+
+    <script src="error.js"></script>
+</body>
+</html>
